@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Northern Dock Systems</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <a href="tel:18666011758" class="top-link">24/7 Emergência: 1-866-601-1758</a>
+                <div class="top-links">
+                    <a href="#" class="top-link">Solicitar Orçamento</a>
+                    <a href="#" class="top-link">Chat Online</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <h2>NORTHERN DOCK SYSTEMS</h2>
+                    </a>
+                </div>
+
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="services.html" class="nav-link">Serviços</a></li>
+                        <li class="dropdown">
+                            <a href="products.html" class="nav-link">Produtos <span class="arrow">▼</span></a>
+                            <div class="mega-menu">
+                                <div class="mega-menu-content">
+                                    <div class="mega-menu-column">
+                                        <h3>Portas</h3>
+                                        <a href="#">Portas Comerciais</a>
+                                        <a href="#">Portas Alta Velocidade</a>
+                                        <a href="#">Portões Automáticos</a>
+                                    </div>
+                                    <div class="mega-menu-column">
+                                        <h3>Docas</h3>
+                                        <a href="#">Niveladoras de Doca</a>
+                                        <a href="#">Selos e Abrigos</a>
+                                        <a href="#">Para-choques</a>
+                                    </div>
+                                    <div class="mega-menu-column">
+                                        <h3>Equipamentos</h3>
+                                        <a href="#">Ventiladores HVLS</a>
+                                        <a href="#">Cortinas de Ar</a>
+                                        <a href="#">Plataformas</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a href="about.html" class="nav-link">Sobre Nós</a></li>
+                        <li><a href="contact.html" class="nav-link active">Contato</a></li>
+                        <li><a href="#" class="btn-primary">Solicitar Orçamento</a></li>
+                    </ul>
+                </nav>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="container">
+            <div class="page-hero-content" data-aos="fade-up">
+                <h1>Entre em Contato</h1>
+                <p>Estamos aqui para ajudar. Fale conosco hoje mesmo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <!-- Contact Info Cards -->
+            <div class="contact-cards">
+                <div class="contact-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="contact-icon">📞</div>
+                    <h3>Telefone</h3>
+                    <p>Ligue para nós</p>
+                    <a href="tel:18666011758" class="contact-link">1-866-601-1758</a>
+                </div>
+
+                <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-icon">✉️</div>
+                    <h3>E-mail</h3>
+                    <p>Resposta em até 24 horas úteis</p>
+                    <a href="mailto:info@exemplo.com" class="contact-link">info@exemplo.com</a>
+                </div>
+
+                <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-icon">📍</div>
+                    <h3>Endereço</h3>
+                    <p>Visite nosso escritório</p>
+                    <span class="contact-link">Rua Exemplo, 123</span>
+                </div>
+
+                <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-icon">⏰</div>
+                    <h3>Horário</h3>
+                    <p>Segunda a Sexta</p>
+                    <span class="contact-link">8:00 - 18:00</span>
+                </div>
+            </div>
+
+            <!-- Main Contact Content -->
+            <div class="contact-content">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper" data-aos="fade-right">
+                    <h2>Envie sua Mensagem</h2>
+                    <p class="form-subtitle">Preencha o formulário abaixo e entraremos em contato em breve.</p>
+
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nome Completo *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="company">Empresa</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">E-mail *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Telefone *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Tipo de Serviço</label>
+                            <select id="service" name="service">
+                                <option value="">Selecione um serviço</option>
+                                <option value="emergency">Serviço de Emergência</option>
+                                <option value="maintenance">Manutenção Preventiva</option>
+                                <option value="installation">Instalação de Equipamentos</option>
+                                <option value="construction">Construção / Novos Projetos</option>
+                                <option value="quote">Solicitar Orçamento</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Assunto *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensagem *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter">
+                                <span>Desejo receber novidades e ofertas por e-mail</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn-primary btn-submit">Enviar Mensagem</button>
+                    </form>
+                </div>
+
+                <!-- Office Location -->
+                <div class="office-locations" data-aos="fade-left">
+                    <h2>Nossa Localização</h2>
+                    <p class="locations-subtitle">Visite nosso escritório ou entre em contato</p>
+
+                    <div class="location-main">
+                        <div class="location-icon">📍</div>
+                        <div class="location-details">
+                            <h3>Escritório Principal</h3>
+                            <p class="location-address">
+                                Rua Exemplo, 123<br>
+                                Bairro - Cidade, Estado<br>
+                                CEP 00000-000
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">📞</div>
+                            <div class="method-info">
+                                <h4>Telefone</h4>
+                                <a href="tel:18666011758">1-866-601-1758</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">✉️</div>
+                            <div class="method-info">
+                                <h4>E-mail</h4>
+                                <a href="mailto:info@exemplo.com">info@exemplo.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="method-icon">💬</div>
+                            <div class="method-info">
+                                <h4>WhatsApp</h4>
+                                <a href="https://wa.me/5500000000000" target="_blank">(00) 00000-0000</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="business-hours">
+                        <h4>Horário de Atendimento</h4>
+                        <div class="hours-list">
+                            <div class="hours-item">
+                                <span>Segunda a Sexta</span>
+                                <span>8:00 - 18:00</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>Sábado</span>
+                                <span>8:00 - 12:00</span>
+                            </div>
+                            <div class="hours-item">
+                                <span>Domingo</span>
+                                <span>Fechado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Perguntas Frequentes</h2>
+                <p>Encontre respostas rápidas para as dúvidas mais comuns</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+                    <h3>Qual é o tempo de resposta para contato?</h3>
+                    <p>Respondemos todos os contatos em até 24 horas úteis. Para emergências, ligue diretamente para nosso telefone.</p>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Vocês oferecem orçamento gratuito?</h3>
+                    <p>Sim! Oferecemos orçamentos gratuitos e sem compromisso. Basta preencher o formulário ou entrar em contato.</p>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Posso agendar uma visita técnica?</h3>
+                    <p>Claro! Entre em contato conosco e agende uma visita técnica para avaliação do seu projeto.</p>
+                </div>
+
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Atendem em outras regiões?</h3>
+                    <p>Sim! Atendemos diversas regiões. Entre em contato para verificar a disponibilidade na sua localidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Northern Dock Systems</h3>
+                    <p>Melhorando segurança, produtividade e eficiência energética desde 2002.</p>
+                    <div class="social-links">
+                        <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook"></a>
+                        <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter"></a>
+                        <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Serviços</a></li>
+                        <li><a href="products.html">Produtos</a></li>
+                        <li><a href="about.html">Sobre Nós</a></li>
+                        <li><a href="contact.html">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Nossos Serviços</h3>
+                    <ul>
+                        <li><a href="#">Serviço 24/7</a></li>
+                        <li><a href="#">Manutenção Preventiva</a></li>
+                        <li><a href="#">Instalações</a></li>
+                        <li><a href="#">Construção</a></li>
+                        <li><a href="#">Eficiência Energética</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul class="contact-info">
+                        <li>📍 Rua Exemplo, 123<br>Cidade, Estado - CEP 00000-000</li>
+                        <li>📞 <a href="tel:18666011758">1-866-601-1758</a></li>
+                        <li>✉️ <a href="mailto:info@exemplo.com">info@exemplo.com</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Northern Dock Systems. Todos os direitos reservados.</p>
+                <div class="footer-links">
+                    <a href="#">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
