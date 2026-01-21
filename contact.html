@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
+
 
     <!-- Header -->
     <header class="header">
@@ -81,28 +83,28 @@
             <!-- Contact Info Cards -->
             <div class="contact-cards">
                 <div class="contact-card" data-aos="fade-up" data-aos-delay="0">
-                    <div class="contact-icon">📞</div>
+                    <div class="contact-icon"><i data-lucide="phone"></i></div>
                     <h3>Telefone</h3>
                     <p>Ligue para nós</p>
                     <a href="tel:18666011758" class="contact-link">1-866-601-1758</a>
                 </div>
 
                 <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="contact-icon">✉️</div>
+                    <div class="contact-icon"><i data-lucide="mail"></i></div>
                     <h3>E-mail</h3>
                     <p>Resposta em até 24 horas úteis</p>
                     <a href="mailto:info@exemplo.com" class="contact-link">info@exemplo.com</a>
                 </div>
 
                 <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="contact-icon">📍</div>
+                    <div class="contact-icon"><i data-lucide="map-pin"></i></div>
                     <h3>Endereço</h3>
                     <p>Visite nosso escritório</p>
                     <span class="contact-link">Rua Exemplo, 123</span>
                 </div>
 
                 <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="contact-icon">⏰</div>
+                    <div class="contact-icon"><i data-lucide="clock"></i></div>
                     <h3>Horário</h3>
                     <p>Segunda a Sexta</p>
                     <span class="contact-link">8:00 - 18:00</span>
@@ -181,7 +183,7 @@
                     <p class="locations-subtitle">Visite nosso escritório ou entre em contato</p>
 
                     <div class="location-main">
-                        <div class="location-icon">📍</div>
+                        <div class="location-icon"><i data-lucide="map-pin"></i></div>
                         <div class="location-details">
                             <h3>Escritório Principal</h3>
                             <p class="location-address">
@@ -194,7 +196,7 @@
 
                     <div class="contact-methods">
                         <div class="contact-method">
-                            <div class="method-icon">📞</div>
+                            <div class="method-icon"><i data-lucide="phone"></i></div>
                             <div class="method-info">
                                 <h4>Telefone</h4>
                                 <a href="tel:18666011758">1-866-601-1758</a>
@@ -202,7 +204,7 @@
                         </div>
 
                         <div class="contact-method">
-                            <div class="method-icon">✉️</div>
+                            <div class="method-icon"><i data-lucide="mail"></i></div>
                             <div class="method-info">
                                 <h4>E-mail</h4>
                                 <a href="mailto:info@exemplo.com">info@exemplo.com</a>
@@ -210,7 +212,7 @@
                         </div>
 
                         <div class="contact-method">
-                            <div class="method-icon">💬</div>
+                            <div class="method-icon"><i data-lucide="message-circle"></i></div>
                             <div class="method-info">
                                 <h4>WhatsApp</h4>
                                 <a href="https://wa.me/5500000000000" target="_blank">(00) 00000-0000</a>
@@ -311,9 +313,9 @@
                 <div class="footer-column">
                     <h3>Contato</h3>
                     <ul class="contact-info">
-                        <li>📍 Rua Exemplo, 123<br>Cidade, Estado - CEP 00000-000</li>
-                        <li>📞 <a href="tel:18666011758">1-866-601-1758</a></li>
-                        <li>✉️ <a href="mailto:info@exemplo.com">info@exemplo.com</a></li>
+                        <li><i data-lucide="map-pin" class="footer-icon"></i> Rua Exemplo, 123<br><span class="footer-indent">Cidade, Estado - CEP 00000-000</span></li>
+                        <li><i data-lucide="phone" class="footer-icon"></i> <a href="tel:18666011758">1-866-601-1758</a></li>
+                        <li><i data-lucide="mail" class="footer-icon"></i> <a href="mailto:info@exemplo.com">info@exemplo.com</a></li>
                     </ul>
                 </div>
             </div>
@@ -332,5 +334,9 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        // Inicializar ícones Lucide
+        lucide.createIcons();
+    </script>
 </body>
 </html>
