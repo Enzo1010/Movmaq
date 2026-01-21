@@ -69,17 +69,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 let lastScroll = 0;
 const header = document.querySelector('.header');
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-        header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.15)';
-    } else {
-        header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-    }
-    
-    lastScroll = currentScroll;
-});
+if (header) {
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 100) {
+            header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.15)';
+        } else {
+            header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+        }
+        
+        lastScroll = currentScroll;
+    });
+}
 
 // Dropdown menu para mobile
 const dropdowns = document.querySelectorAll('.dropdown');
@@ -90,24 +92,19 @@ dropdowns.forEach(dropdown => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const megaMenu = dropdown.querySelector('.mega-menu');
-            megaMenu.style.display = megaMenu.style.display === 'block' ? 'none' : 'block';
+            if (megaMenu) {
+                megaMenu.style.display = megaMenu.style.display === 'block' ? 'none' : 'block';
+            }
         });
     }
 });
 
-// ========================================
-// EMAILJS - CONFIGURAÇÃO
-// ========================================
+// ----------------------------------------
+// FORMULÁRIO DE CONTATO - PHP
+// ----------------------------------------
 
-const EMAILJS_PUBLIC_KEY = 'CIzqhYpKRg9K2diBo';      // ✅ Public Key
-const EMAILJS_SERVICE_ID = 'service_p9kb9in';       // ✅ Service ID
-const EMAILJS_TEMPLATE_ID = 'template_oekklwm';     // ✅ Template ID
-
-// Inicializar EmailJS
-emailjs.init(EMAILJS_PUBLIC_KEY);
-
-// Formulário de contato
 const contactForm = document.getElementById('contactForm');
+
 if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -117,41 +114,34 @@ if (contactForm) {
         const originalText = submitBtn.textContent;
         
         // Mostrar loading
-        submitBtn.textContent = '⏳ Enviando...';
+        submitBtn.textContent = 'Enviando...';
         submitBtn.disabled = true;
         
         // Pegar dados do formulário
-        const formData = {
-            name: document.getElementById('name').value,
-            company: document.getElementById('company').value || 'Não informado',
-            email: document.getElementById('email').value,
-            phone: document.getElementById('phone').value,
-            service: document.getElementById('service').value || 'Não especificado',
-            subject: document.getElementById('subject').value,
-            message: document.getElementById('message').value
-        };
+        const formData = new FormData(contactForm);
         
         try {
-            // Enviar e-mail via EmailJS
-            const response = await emailjs.send(
-                EMAILJS_SERVICE_ID,
-                EMAILJS_TEMPLATE_ID,
-                formData
-            );
+            // Enviar para o PHP
+            const response = await fetch('send-email.php', {
+                method: 'POST',
+                body: formData
+            });
             
-            console.log('✅ Email enviado:', response);
+            const result = await response.json();
             
-            // Mostrar mensagem de sucesso
-            showSuccessMessage(formData.name);
-            
-            // Limpar formulário
-            contactForm.reset();
+            if (result.success) {
+                // Sucesso
+                showSuccessMessage(formData.get('name'));
+                contactForm.reset();
+            } else {
+                // Erro retornado pelo PHP
+                showErrorMessage(result.message);
+            }
             
         } catch (error) {
-            console.error('❌ Erro ao enviar:', error);
-            
-            // Mostrar mensagem de erro
-            showErrorMessage(error);
+            // Erro de conexão
+            console.error('Erro:', error);
+            showErrorMessage('Erro ao enviar mensagem. Por favor, tente novamente ou entre em contato por telefone.');
             
         } finally {
             // Restaurar botão
@@ -163,7 +153,6 @@ if (contactForm) {
 
 // Função para mostrar mensagem de sucesso
 function showSuccessMessage(name) {
-    // Criar elemento de mensagem
     const message = document.createElement('div');
     message.className = 'alert-message success-message';
     message.innerHTML = `
@@ -189,7 +178,7 @@ function showSuccessMessage(name) {
 }
 
 // Função para mostrar mensagem de erro
-function showErrorMessage(error) {
+function showErrorMessage(errorMsg) {
     const message = document.createElement('div');
     message.className = 'alert-message error-message';
     message.innerHTML = `
@@ -197,7 +186,8 @@ function showErrorMessage(error) {
             <div class="alert-icon">⚠</div>
             <div class="alert-text">
                 <h3>Erro ao Enviar Mensagem</h3>
-                <p>Por favor, tente novamente ou entre em contato por telefone: <a href="tel:18666011758">1-866-601-1758</a></p>
+                <p>${errorMsg}</p>
+                <p>Ou ligue: <a href="tel:18666011758">1-866-601-1758</a></p>
             </div>
             <button class="alert-close" onclick="this.parentElement.parentElement.remove()">×</button>
         </div>
@@ -321,9 +311,11 @@ if ('IntersectionObserver' in window) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.add('loaded');
-                observer.unobserve(img);
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.classList.add('loaded');
+                    observer.unobserve(img);
+                }
             }
         });
     });
@@ -333,4 +325,4 @@ if ('IntersectionObserver' in window) {
 }
 
 console.log('✅ Site carregado com sucesso!');
-console.log('📧 EmailJS configurado e pronto para uso!');
+console.log('📧 Formulário configurado com PHP!');
