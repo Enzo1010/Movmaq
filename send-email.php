@@ -3,7 +3,7 @@
 
 // CONFIGURAÇÕES
 
-$destinatario = 'contato@exemplo.com.br'; 
+$destinatario = 'teleg1507@gmail.com'; 
 $nome_site = 'Northern Dock Systems';
 
 

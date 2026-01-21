@@ -324,5 +324,5 @@ if ('IntersectionObserver' in window) {
     images.forEach(img => imageObserver.observe(img));
 }
 
-console.log('✅ Site carregado com sucesso!');
-console.log('📧 Formulário configurado com PHP!');
+console.log('Site carregado com sucesso!');
+console.log('Formulário configurado com PHP!');
