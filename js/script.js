@@ -1,9 +1,11 @@
-// Inicializar AOS (Animações)
-AOS.init({
-    duration: 1000,
-    once: true,
-    offset: 100
-});
+// Inicializar AOS (Animações) - APENAS SE EXISTIR
+if (typeof AOS !== 'undefined') {
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100
+    });
+}
 
 // Inicializar Swiper (Slider) - APENAS SE EXISTIR
 if (document.querySelector('.heroSwiper') && typeof Swiper !== 'undefined') {
@@ -83,18 +85,28 @@ if (header) {
     });
 }
 
-// Dropdown menu para mobile
+// Dropdown menu para mobile (robusto em resize)
 const dropdowns = document.querySelectorAll('.dropdown');
+
 dropdowns.forEach(dropdown => {
     const link = dropdown.querySelector('.nav-link');
-    
-    if (window.innerWidth <= 1024) {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const megaMenu = dropdown.querySelector('.mega-menu');
-            if (megaMenu) {
-                megaMenu.style.display = megaMenu.style.display === 'block' ? 'none' : 'block';
-            }
+    const megaMenu = dropdown.querySelector('.mega-menu');
+    if (!link || !megaMenu) return;
+
+    link.addEventListener('click', (e) => {
+        // Só intercepta clique em modo mobile
+        if (!window.matchMedia('(max-width: 1024px)').matches) return;
+
+        e.preventDefault();
+        megaMenu.style.display = megaMenu.style.display === 'block' ? 'none' : 'block';
+    });
+});
+
+// Resetar estado inline do mega-menu quando voltar para desktop
+window.addEventListener('resize', () => {
+    if (window.matchMedia('(min-width: 1025px)').matches) {
+        document.querySelectorAll('.dropdown .mega-menu').forEach(menu => {
+            menu.style.display = '';
         });
     }
 });
