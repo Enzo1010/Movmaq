@@ -70,6 +70,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Header scroll effect
 let lastScroll = 0;
 const header = document.querySelector('.header');
+const topBanner = document.querySelector('.top-banner');
+const utilityBar = document.querySelector('.utility-bar');
 
 if (header) {
     window.addEventListener('scroll', () => {
@@ -82,6 +84,14 @@ if (header) {
         }
         
         lastScroll = currentScroll;
+    });
+}
+
+// Fechar barra superior
+const bannerCloseBtn = document.querySelector('.banner-close');
+if (bannerCloseBtn && topBanner) {
+    bannerCloseBtn.addEventListener('click', () => {
+        topBanner.style.display = 'none';
     });
 }
 
