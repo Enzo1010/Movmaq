@@ -1,158 +1,315 @@
 /* ========================================
-   ESTILOS PARA ÍCONES LUCIDE
+
+   ESTILOS PARA CONES LUCIDE
+
    ======================================== */
 
-/* Ícones gerais */
+
+
+/* cones gerais */
+
 .contact-icon svg,
+
 .location-icon svg,
+
 .method-icon svg {
+
     width: 48px;
+
     height: 48px;
+
     stroke: var(--accent);
+
     stroke-width: 2;
+
 }
 
-/* Ícones no footer */
+
+
+/* cones no footer */
+
 .footer-icon {
+
     display: inline-block;
+
     vertical-align: middle;
+
     margin-right: 8px;
+
 }
+
+
 
 .footer-icon svg {
+
     width: 16px;
+
     height: 16px;
+
     stroke: var(--white);
+
     opacity: 0.8;
+
 }
+
+
 
 .footer-indent {
+
     display: inline-block;
+
     margin-left: 24px;
+
 }
 
-/* Contact cards - ajustar para ícones */
+
+
+/* Contact cards - ajustar para cones */
+
 .contact-card .contact-icon {
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     width: 80px;
+
     height: 80px;
+
     margin: 0 auto 20px;
+
     background: var(--light-gray);
+
     border-radius: 50%;
+
     transition: all 0.3s;
+
 }
+
+
 
 .contact-card:hover .contact-icon {
+
     background: var(--accent);
+
     transform: scale(1.1);
+
 }
+
+
 
 .contact-card:hover .contact-icon svg {
+
     stroke: var(--white);
+
 }
+
+
 
 /* Location icon */
+
 .location-icon {
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     width: 60px;
+
     height: 60px;
+
     background: var(--accent);
+
     border-radius: 50%;
+
     flex-shrink: 0;
+
 }
+
+
 
 .location-icon svg {
+
     stroke: var(--white) !important;
+
 }
+
+
 
 /* Method icons */
+
 .method-icon {
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     width: 50px;
+
     height: 50px;
+
     background: var(--light-gray);
+
     border-radius: 50%;
+
     flex-shrink: 0;
+
     transition: all 0.3s;
+
 }
+
+
 
 .contact-method:hover .method-icon {
+
     background: var(--accent);
+
 }
+
+
 
 .contact-method:hover .method-icon svg {
+
     stroke: var(--white);
+
 }
+
+
 
 /* About page icons */
+
 .mvv-icon {
+
     font-size: 64px;
+
     margin-bottom: 25px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     height: 100px;
+
 }
+
+
 
 .mvv-icon svg {
+
     width: 64px;
+
     height: 64px;
+
     stroke: var(--accent);
+
     stroke-width: 2;
+
 }
+
+
 
 /* Products page icons */
+
 .category-header h2 {
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 15px;
+
 }
+
+
 
 .category-icon {
+
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
+
     width: 50px;
+
     height: 50px;
+
     background: var(--accent);
+
     border-radius: 50%;
+
 }
+
+
 
 .category-icon svg {
+
     width: 28px;
+
     height: 28px;
+
     stroke: var(--white);
+
     stroke-width: 2;
+
 }
 
+
+
 /* Responsive */
+
 @media (max-width: 768px) {
+
     .contact-icon svg,
+
     .location-icon svg,
+
     .method-icon svg {
+
         width: 36px;
+
         height: 36px;
+
     }
+
     
+
     .contact-card .contact-icon {
+
         width: 60px;
+
         height: 60px;
+
     }
+
     
+
     .location-icon {
+
         width: 50px;
+
         height: 50px;
+
     }
+
     
+
     .method-icon {
+
         width: 40px;
+
         height: 40px;
+
     }
+
 }

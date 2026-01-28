@@ -1,352 +1,852 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Produtos - Northern Dock Systems</title>
+
     <link rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="css/products.css">
+
     <link rel="stylesheet" href="css/icons.css">
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js"></script>
+
 </head>
+
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="index.html">
-                        <h2>NORTHERN DOCK SYSTEMS</h2>
-                    </a>
-                </div>
+ <!-- Emergency Promo Bar -->
 
-                <nav class="nav" id="nav">
-                    <ul class="nav-list">
-                        <li><a href="index.html" class="nav-link">Home</a></li>
-                        <li><a href="services.html" class="nav-link">Serviços</a></li>
-                        <li class="dropdown">
-                            <a href="products.html" class="nav-link active">Produtos <span class="arrow">▼</span></a>
-                            <div class="mega-menu">
-                                <div class="mega-menu-content">
-                                    <div class="mega-menu-column">
-                                        <h3>Portas</h3>
-                                        <a href="#portas">Portas Comerciais</a>
-                                        <a href="#portas">Portas Alta Velocidade</a>
-                                        <a href="#portas">Portões Automáticos</a>
-                                    </div>
-                                    <div class="mega-menu-column">
-                                        <h3>Docas</h3>
-                                        <a href="#docas">Niveladoras de Doca</a>
-                                        <a href="#docas">Selos e Abrigos</a>
-                                        <a href="#docas">Para-choques</a>
-                                    </div>
-                                    <div class="mega-menu-column">
-                                        <h3>Equipamentos</h3>
-                                        <a href="#equipamentos">Ventiladores HVLS</a>
-                                        <a href="#equipamentos">Cortinas de Ar</a>
-                                        <a href="#equipamentos">Plataformas</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li><a href="success.html" class="nav-link">Histórias de Sucesso</a></li>
-                        <li><a href="about.html" class="nav-link">Sobre Nós</a></li>
-                        <li><a href="contact.html" class="nav-link">Contato</a></li>
-                        <li><a href="contact.html" class="btn-primary">Solicitar Orçamento</a></li>
-                    </ul>
-                </nav>
+    <div class="top-banner">
+      <div class="container banner-content">
+        <p>
+          Serviço de emergência e reparos 24 horas por dia, 7 dias por semana, com
+          identificação da causa raiz e soluções na primeira visita.
+        </p>
 
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+        <a href="contact.html" class="btn-banner">Solicitar serviço</a>
+      </div>
+
+      <button class="banner-close" aria-label="Fechar aviso">×</button>
+    </div>
+
+    <!-- Secondary Utility Bar -->
+
+    <div class="utility-bar">
+      <div class="container utility-content">
+        <div class="utility-alert">
+          <i data-lucide="wrench" aria-hidden="true"></i>
+
+          <span>Serviço de emergência 24 horas por dia, 7 dias por semana</span>
         </div>
+
+        <div class="utility-actions">
+          <a href="contact.html" class="utility-btn info">
+            <i data-lucide="info" aria-hidden="true"></i>
+
+            Solicite um orçamento
+          </a>
+
+          <a href="contact.html#chat" class="utility-btn chat">
+            <i data-lucide="message-circle" aria-hidden="true"></i>
+
+            Iniciar um bate-papo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <a href="index.html">
+              <img src="images/logo1.svg" alt="Northern Dock Systems logo" />
+            </a>
+          </div>
+
+          <nav class="nav" id="nav">
+            <ul class="nav-list">
+              <li><a href="index.html" class="nav-link active">Home</a></li>
+
+                      <li class="dropdown">
+                        <a href="services.html" class="nav-link">Serviços <span class="arrow">▾</span></a>
+                        <div class="mega-menu services-menu">
+                            <div class="solutions-grid">
+                                <a href="services.html#saude" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="shield-plus"></i></div>
+                                    <span>Soluções de Saúde e Segurança</span>
+                                    <small class="solution-tag">Novo</small>
+                                </a>
+                                <a href="services.html#farmaceutico" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="pill"></i></div>
+                                    <span>Soluções Farmacêuticas</span>
+                                </a>
+                                <a href="services.html#alimentos" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="utensils"></i></div>
+                                    <span>Soluções para Fabricação de Alimentos</span>
+                                </a>
+                                <a href="services.html#refrigerado" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="thermometer-snowflake"></i></div>
+                                    <span>Soluções de armazenamento refrigerado</span>
+                                </a>
+                                <a href="services.html#armazenagem" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="boxes"></i></div>
+                                    <span>Soluções para Armazenagem</span>
+                                </a>
+                                <a href="services.html#fabricacao" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="factory"></i></div>
+                                    <span>Soluções de fabricação</span>
+                                </a>
+                                <a href="services.html#automotivo" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="car"></i></div>
+                                    <span>Soluções Automotivas</span>
+                                </a>
+                                <a href="services.html#autoarmazenamento" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="warehouse"></i></div>
+                                    <span>Soluções de autoarmazenamento</span>
+                                </a>
+                                <a href="services.html#varejo" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="shopping-cart"></i></div>
+                                    <span>Soluções para o Varejo</span>
+                                </a>
+                                <a href="services.html#agricultura" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="tractor"></i></div>
+                                    <span>Soluções para Agricultura</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+              <li class="dropdown">
+                <a href="products.html" class="nav-link"
+                  >Produtos <span class="arrow">▾</span></a
+                >
+
+                <div class="mega-menu products-menu">
+                  <div class="products-grid">
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1582719478248-56e38e21c1b8?w=400&auto=format&fit=crop"
+                        alt="Produtos de reposi??o e seguran?a"
+                      />
+
+                      <span>Produtos de reposição e segurança</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1582719478235-2f5c70b77ae2?w=400&auto=format&fit=crop"
+                        alt="Cortinas de ar comerciais"
+                      />
+
+                      <span>Cortinas de ar comerciais</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&auto=format&fit=crop"
+                        alt="Mesas de tesoura e elevatrias"
+                      />
+
+                      <span>Mesas de tesoura e elevatrias</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1503389152951-9f343605f61e?w=400&auto=format&fit=crop"
+                        alt="Para-choques e cabeos de amarra??o"
+                      />
+
+                      <span>Para-choques e cabeços de amarração</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&auto=format&fit=crop"
+                        alt="Niveladores de doca e acess?rios"
+                      />
+
+                      <span>Niveladores de doca e acessórios</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1529429617124-aee711a10c77?w=400&auto=format&fit=crop"
+                        alt="Selos, abrigos e dossis"
+                      />
+
+                      <span>Selos, abrigos e dossis</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1529429617124-95b109e86b66?w=400&auto=format&fit=crop"
+                        alt="Portas de alta velocidade"
+                      />
+
+                      <span>Portas de alta velocidade</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&auto=format&fit=crop"
+                        alt="Portas e Port?es Comerciais"
+                      />
+
+                      <span>Portas e Portões Comerciais</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=400&auto=format&fit=crop"
+                        alt="Portas de pedestres e portas autom?ticas"
+                      />
+
+                      <span>Portas de pedestres e portas automáticas</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=400&auto=format&fit=crop"
+                        alt="Vedao e tiras de vedao"
+                      />
+
+                      <span>Vedação e tiras de vedação</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1529429617124-95b109e86b66?w=400&auto=format&fit=crop"
+                        alt="Ventiladores e Filtragem de Ar"
+                      />
+
+                      <span>Ventiladores e Filtragem de Ar</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1606813902910-3f5de13ef8dd?w=400&auto=format&fit=crop"
+                        alt="Sistemas de reten??o para reboques e ve?culos"
+                      />
+
+                      <span>Sistemas de retenção para reboques e veículos</span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <a href="success.html" class="nav-link">Histórias de Sucesso</a>
+              </li>
+
+              <li><a href="about.html" class="nav-link">Sobre Nós</a></li>
+
+              <li><a href="contact.html" class="nav-link">Contato</a></li>
+
+              <li>
+                <a href="contact.html" class="btn-primary"
+                  >Solicitar Orçamento</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span></span>
+
+            <span></span>
+
+            <span></span>
+          </button>
+        </div>
+      </div>
     </header>
 
+
+
+
     <!-- Page Hero -->
+
     <section class="page-hero">
+
         <div class="page-hero-overlay"></div>
+
         <div class="container">
+
             <div class="page-hero-content" data-aos="fade-up">
+
                 <h1>Nossos Produtos</h1>
-                <p>Soluções completas em equipamentos industriais de alta qualidade</p>
+
+                <p>Solues completas em equipamentos industriais de alta qualidade</p>
+
             </div>
+
         </div>
+
     </section>
+
+
 
     <!-- Products Overview -->
+
     <section class="products-intro">
+
         <div class="container">
+
             <div class="intro-content" data-aos="fade-up">
+
                 <h2>Equipamentos de Qualidade Superior</h2>
-                <p>Oferecemos uma linha completa de produtos para atender todas as necessidades do seu negócio. Desde portas industriais até sistemas completos de docas, trabalhamos apenas com as melhores marcas e garantimos a qualidade de cada instalação.</p>
+
+                <p>Oferecemos uma linha completa de produtos para atender todas as necessidades do seu negcio. Desde portas industriais at sistemas completos de docas, trabalhamos apenas com as melhores marcas e garantimos a qualidade de cada instalao.</p>
+
             </div>
+
         </div>
+
     </section>
+
+
 
     <!-- Category: Portas -->
+
     <section id="portas" class="products-category">
+
         <div class="container">
+
             <div class="category-header" data-aos="fade-up">
+
                 <h2><span class="category-icon"><i data-lucide="door-open"></i></span> Portas Industriais</h2>
-                <p>Portas de alta qualidade para diversos tipos de aplicações industriais</p>
+
+                <p>Portas de alta qualidade para diversos tipos de aplica??es industriais</p>
+
             </div>
+
+
 
             <div class="products-grid">
+
                 <div class="product-card" data-aos="fade-up" data-aos-delay="0">
+
                     <div class="product-image">
+
                         <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600" alt="Portas Seccionais">
+
                         <div class="product-badge">Popular</div>
+
                     </div>
+
                     <div class="product-content">
+
                         <h3>Portas Seccionais</h3>
+
                         <p>Portas overhead seccionais isoladas, ideais para ambientes que necessitam controle de temperatura.</p>
+
                         <ul class="product-features">
-                            <li>✓ Isolamento térmico superior</li>
-                            <li>✓ Operação silenciosa</li>
-                            <li>✓ Diversos acabamentos</li>
+
+                            <li>?o" Isolamento t?rmico superior</li>
+
+                            <li>?o" Operao silenciosa</li>
+
+                            <li>?o" Diversos acabamentos</li>
+
                         </ul>
+
                         <a href="contact.html" class="btn-primary">Solicitar Orçamento</a>
+
                     </div>
+
                 </div>
+
+
 
                 <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+
                     <div class="product-image">
+
                         <img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=600" alt="Portas Alta Velocidade">
+
                         <div class="product-badge new">Novo</div>
+
                     </div>
+
                     <div class="product-content">
+
                         <h3>Portas de Alta Velocidade</h3>
-                        <p>Portas roll-up de alta velocidade para máxima eficiência operacional e controle de tráfego.</p>
+
+                        <p>Portas roll-up de alta velocidade para mxima Eficincia operacional e controle de tr?fego.</p>
+
                         <ul class="product-features">
-                            <li>✓ Abertura rápida</li>
-                            <li>✓ Auto-reparável</li>
-                            <li>✓ Sensor de segurança</li>
+
+                            <li>?o" Abertura rpida</li>
+
+                            <li>?o" Auto-repar?vel</li>
+
+                            <li>?o" Sensor de Segurana</li>
+
                         </ul>
+
                         <a href="contact.html" class="btn-primary">Solicitar Orçamento</a>
+
                     </div>
+
                 </div>
 
+
+
                 <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+
                     <div class="product-image">
-                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600" alt="Portões Automáticos">
+
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600" alt="Port?es Autom?ticos">
+
                     </div>
+
                     <div class="product-content">
-                        <h3>Portões Automáticos</h3>
-                        <p>Portões de enrolar e sistemas de fechamento automático para maior segurança.</p>
+
+                        <h3>Port?es Autom?ticos</h3>
+
+                        <p>Port?es de enrolar e sistemas de fechamento autom?tico para maior Segurana.</p>
+
                         <ul class="product-features">
-                            <li>✓ Sistema motorizado</li>
-                            <li>✓ Controle remoto</li>
-                            <li>✓ Alta durabilidade</li>
+
+                            <li>?o" Sistema motorizado</li>
+
+                            <li>?o" Controle remoto</li>
+
+                            <li>?o" Alta durabilidade</li>
+
                         </ul>
+
                         <a href="contact.html" class="btn-primary">Solicitar Orçamento</a>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
+
+
 
     <!-- Category: Docas -->
+
     <section id="docas" class="products-category alt-bg">
+
         <div class="container">
+
             <div class="category-header" data-aos="fade-up">
+
                 <h2><span class="category-icon"><i data-lucide="wrench"></i></span> Equipamentos para Docas</h2>
-                <p>Soluções completas para otimizar suas operações de carga e descarga</p>
+
+                <p>Solues completas para otimizar suas operaes de carga e descarga</p>
+
             </div>
+
+
 
             <div class="products-grid">
+
                 <div class="product-card" data-aos="fade-up" data-aos-delay="0">
+
                     <div class="product-image">
+
                         <img src="https://images.unsplash.com/photo-1586528116493-a029325540fa?w=600" alt="Niveladoras de Doca">
+
                     </div>
+
                     <div class="product-content">
+
                         <h3>Niveladoras de Doca</h3>
-                        <p>Niveladoras hidráulicas e mecânicas para facilitar carga e descarga de caminhões.</p>
+
+                        <p>Niveladoras hidr?ulicas e mecnicas para facilitar carga e descarga de caminhes.</p>
+
                         <ul class="product-features">
-                            <li>✓ Capacidade até 30 toneladas</li>
-                            <li>✓ Operação suave</li>
-                            <li>✓ Baixa manutenção</li>
+
+                            <li>?o" Capacidade at 30 toneladas</li>
+
+                            <li>?o" Operao suave</li>
+
+                            <li>?o" Baixa manuteno</li>
+
                         </ul>
+
                         <a href="contact.html" class="btn-primary">Solicitar Orçamento</a>
+
                     </div>
+
                 </div>
+
+
 
                 <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+
                     <div class="product-image">
+
                         <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600" alt="Selos e Abrigos">
+
                         <div class="product-badge">Economia</div>
+
                     </div>
+
                     <div class="product-content">
+
                         <h3>Selos e Abrigos de Doca</h3>
-                        <p>Vedação perfeita entre doca e caminhão, reduzindo perdas energéticas.</p>
+
+                        <p>Vedao perfeita entre doca e caminho, reduzindo perdas energticas.</p>
+
                         <ul class="product-features">
-                            <li>✓ Economia de energia</li>
-                            <li>✓ Proteção climática</li>
-                            <li>✓ Várias configurações</li>
+
+                            <li>?o" Economia de energia</li>
+
+                            <li>?o" Proteo clim?tica</li>
+
+                            <li>?o" V?rias configuraes</li>
+
                         </ul>
+
                         <a href="contact.html" class="btn-primary">Solicitar Orçamento</a>
+
                     </div>
+
                 </div>
 
+
+
                 <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+
                     <div class="product-image">
+
                         <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600" alt="Para-choques">
+
                     </div>
+
                     <div class="product-content">
+
                         <h3>Para-choques e Guias</h3>
-                        <p>Proteção essencial para sua doca e caminhões durante operações de carga.</p>
+
+                        <p>Proteo essencial para sua doca e caminhes durante operaes de carga.</p>
+
                         <ul class="product-features">
-                            <li>✓ Material resistente</li>
-                            <li>✓ Absorção de impacto</li>
-                            <li>✓ Fácil instalação</li>
+
+                            <li>?o" Material resistente</li>
+
+                            <li>?o" Absor??o de impacto</li>
+
+                            <li>?o" F?cil instalao</li>
+
                         </ul>
+
                         <a href="contact.html" class="btn-primary">Solicitar Orçamento</a>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
+
+
 
     <!-- Category: Equipamentos -->
+
     <section id="equipamentos" class="products-category">
+
         <div class="container">
+
             <div class="category-header" data-aos="fade-up">
+
                 <h2><span class="category-icon"><i data-lucide="settings"></i></span> Equipamentos Auxiliares</h2>
-                <p>Produtos complementares para maximizar eficiência e conforto</p>
+
+                <p>Produtos complementares para maximizar Eficincia e conforto</p>
+
             </div>
+
+
 
             <div class="products-grid">
+
                 <div class="product-card" data-aos="fade-up" data-aos-delay="0">
+
                     <div class="product-image">
+
                         <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=600" alt="Ventiladores HVLS">
+
                         <div class="product-badge">Destaque</div>
+
                     </div>
+
                     <div class="product-content">
+
                         <h3>Ventiladores HVLS</h3>
-                        <p>Ventiladores de grande diâmetro para circulação de ar em grandes espaços.</p>
+
+                        <p>Ventiladores de grande di?metro para circula??o de ar em grandes espos.</p>
+
                         <ul class="product-features">
-                            <li>✓ Economia de energia</li>
-                            <li>✓ Cobertura ampla</li>
-                            <li>✓ Operação silenciosa</li>
+
+                            <li>?o" Economia de energia</li>
+
+                            <li>?o" Cobertura ampla</li>
+
+                            <li>?o" Operao silenciosa</li>
+
                         </ul>
+
                         <a href="contact.html" class="btn-primary">Solicitar Orçamento</a>
+
                     </div>
+
                 </div>
+
+
 
                 <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+
                     <div class="product-image">
+
                         <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600" alt="Cortinas de Ar">
+
                     </div>
+
                     <div class="product-content">
+
                         <h3>Cortinas de Ar</h3>
-                        <p>Barreira de ar invisível para controle de temperatura e proteção contra insetos.</p>
+
+                        <p>Barreira de ar invis?vel para controle de temperatura e proteo contra insetos.</p>
+
                         <ul class="product-features">
-                            <li>✓ Eficiência energética</li>
-                            <li>✓ Controle de temperatura</li>
-                            <li>✓ Proteção ambiental</li>
+
+                            <li>?o" Eficincia energtica</li>
+
+                            <li>?o" Controle de temperatura</li>
+
+                            <li>?o" Proteo ambiental</li>
+
                         </ul>
+
                         <a href="contact.html" class="btn-primary">Solicitar Orçamento</a>
+
                     </div>
+
                 </div>
+
+
 
                 <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+
                     <div class="product-image">
+
                         <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600" alt="Plataformas">
+
                     </div>
+
                     <div class="product-content">
-                        <h3>Plataformas Elevatórias</h3>
-                        <p>Sistemas de elevação para facilitar movimentação de cargas entre níveis.</p>
+
+                        <h3>Plataformas Elevatrias</h3>
+
+                        <p>Sistemas de eleva??o para facilitar movimenta??o de cargas entre n?veis.</p>
+
                         <ul class="product-features">
-                            <li>✓ Várias capacidades</li>
-                            <li>✓ Sistema hidráulico</li>
-                            <li>✓ Segurança garantida</li>
+
+                            <li>?o" V?rias capacidades</li>
+
+                            <li>?o" Sistema hidr?ulico</li>
+
+                            <li>?o" Segurana garantida</li>
+
                         </ul>
+
                         <a href="contact.html" class="btn-primary">Solicitar Orçamento</a>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
+
+
 
     <!-- CTA Section -->
+
     <section class="cta-section">
+
         <div class="container">
+
             <div class="cta-content">
-                <h2 data-aos="fade-up">Não Encontrou o Que Procura?</h2>
-                <p data-aos="fade-up" data-aos-delay="100">Entre em contato conosco e fale sobre suas necessidades específicas. Temos soluções personalizadas para cada tipo de negócio.</p>
+
+                <h2 data-aos="fade-up">No Encontrou o Que Procura?</h2>
+
+                <p data-aos="fade-up" data-aos-delay="100">Entre em contato conosco e fale sobre suas necessidades espec?ficas. Temos solues personalizadas para cada tipo de negcio.</p>
+
                 <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+
                     <a href="contact.html" class="btn-primary">Falar com Especialista</a>
+
                     <a href="tel:18666011758" class="btn-secondary">Ligar: 1-866-601-1758</a>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
+
+
     <!-- Footer -->
+
     <footer class="footer">
+
         <div class="container">
+
             <div class="footer-grid">
+
                 <div class="footer-column">
+
                     <h3>Northern Dock Systems</h3>
-                    <p>Melhorando segurança, produtividade e eficiência energética desde 2002.</p>
+
+                    <p>Melhorando Segurana, produtividade e Eficincia energtica desde 2002.</p>
+
                     <div class="social-links">
+
                         <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook"></a>
+
                         <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter"></a>
+
                         <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"></a>
+
                     </div>
+
                 </div>
 
+
+
                 <div class="footer-column">
-                    <h3>Links Rápidos</h3>
+
+                    <h3>Links Rpidos</h3>
+
                     <ul>
+
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Serviços</a></li>
+
+                        <li><a href="services.html">Servios</a></li>
+
                         <li><a href="products.html">Produtos</a></li>
-                        <li><a href="about.html">Sobre Nós</a></li>
+
+                        <li><a href="about.html">Sobre Ns</a></li>
+
                         <li><a href="contact.html">Contato</a></li>
+
                     </ul>
+
                 </div>
 
+
+
                 <div class="footer-column">
-                    <h3>Nossos Serviços</h3>
+
+                    <h3>Nossos Servios</h3>
+
                     <ul>
-                        <li><a href="services.html">Serviço 24/7</a></li>
-                        <li><a href="services.html">Manutenção Preventiva</a></li>
-                        <li><a href="services.html">Instalações</a></li>
-                        <li><a href="services.html">Construção</a></li>
-                        <li><a href="services.html">Eficiência Energética</a></li>
+
+                        <li><a href="services.html">Servio 24/7</a></li>
+
+                        <li><a href="services.html">Manuteno Preventiva</a></li>
+
+                        <li><a href="services.html">Instalaes</a></li>
+
+                        <li><a href="services.html">Construo</a></li>
+
+                        <li><a href="services.html">Eficincia Energtica</a></li>
+
                     </ul>
+
                 </div>
 
+
+
                 <div class="footer-column">
+
                     <h3>Contato</h3>
+
                     <ul class="contact-info">
+
                         <li><i data-lucide="map-pin" class="footer-icon"></i> Rua Exemplo, 123<br><span class="footer-indent">Cidade, Estado - CEP 00000-000</span></li>
+
                         <li><i data-lucide="phone" class="footer-icon"></i> <a href="tel:18666011758">1-866-601-1758</a></li>
+
                         <li><i data-lucide="mail" class="footer-icon"></i> <a href="mailto:info@exemplo.com">info@exemplo.com</a></li>
+
                     </ul>
+
                 </div>
+
             </div>
+
         </div>
+
+
 
         <div class="footer-bottom">
+
             <div class="container">
+
                 <p>&copy; 2026 Northern Dock Systems. Todos os direitos reservados.</p>
+
                 <div class="footer-links">
-                    <a href="#">Política de Privacidade</a>
+
+                    <a href="#">Pol?tica de Privacidade</a>
+
                     <a href="#">Termos de Uso</a>
+
                 </div>
+
             </div>
+
         </div>
+
     </footer>
 
+
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script src="js/script.js"></script>
+
     <script>
+
         lucide.createIcons();
+
     </script>
+
 </body>
+
 </html>
+
+
+
+
+
+
+

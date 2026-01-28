@@ -1,345 +1,834 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nós - Northern Dock Systems</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/about.css">
-    <link rel="stylesheet" href="css/icons.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-   <script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js"></script>
-</head>
-<body>
 
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sobre Ns - Northern Dock Systems</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/about.css">
+
+    <link rel="stylesheet" href="css/icons.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+   <script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js"></script>
+
+</head>
+
+<body>
+ <!-- Emergency Promo Bar -->
+
+    <div class="top-banner">
+      <div class="container banner-content">
+        <p>
+          Serviço de emergência e reparos 24 horas por dia, 7 dias por semana, com
+          identificação da causa raiz e soluções na primeira visita.
+        </p>
+
+        <a href="contact.html" class="btn-banner">Solicitar serviço</a>
+      </div>
+
+      <button class="banner-close" aria-label="Fechar aviso">×</button>
+    </div>
+
+    <!-- Secondary Utility Bar -->
+
+    <div class="utility-bar">
+      <div class="container utility-content">
+        <div class="utility-alert">
+          <i data-lucide="wrench" aria-hidden="true"></i>
+
+          <span>Serviço de emergência 24 horas por dia, 7 dias por semana</span>
+        </div>
+
+        <div class="utility-actions">
+          <a href="contact.html" class="utility-btn info">
+            <i data-lucide="info" aria-hidden="true"></i>
+
+            Solicite um orçamento
+          </a>
+
+          <a href="contact.html#chat" class="utility-btn chat">
+            <i data-lucide="message-circle" aria-hidden="true"></i>
+
+            Iniciar um bate-papo
+          </a>
+        </div>
+      </div>
+    </div>
 
     <!-- Header -->
+
     <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="index.html">
-                        <h2>NORTHERN DOCK SYSTEMS</h2>
-                    </a>
-                </div>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <a href="index.html">
+              <img src="images/logo1.svg" alt="Northern Dock Systems logo" />
+            </a>
+          </div>
 
-                <nav class="nav" id="nav">
-                    <ul class="nav-list">
-                        <li><a href="index.html" class="nav-link">Home</a></li>
-                        <li><a href="services.html" class="nav-link">Serviços</a></li>
-                        <li class="dropdown">
-                            <a href="products.html" class="nav-link">Produtos <span class="arrow">▼</span></a>
-                            <div class="mega-menu">
-                                <div class="mega-menu-content">
-                                    <div class="mega-menu-column">
-                                        <h3>Portas</h3>
-                                        <a href="products.html#portas">Portas Comerciais</a>
-                                        <a href="products.html#portas">Portas Alta Velocidade</a>
-                                        <a href="products.html#portas">Portões Automáticos</a>
-                                    </div>
-                                    <div class="mega-menu-column">
-                                        <h3>Docas</h3>
-                                        <a href="products.html#docas">Niveladoras de Doca</a>
-                                        <a href="products.html#docas">Selos e Abrigos</a>
-                                        <a href="products.html#docas">Para-choques</a>
-                                    </div>
-                                    <div class="mega-menu-column">
-                                        <h3>Equipamentos</h3>
-                                        <a href="products.html#equipamentos">Ventiladores HVLS</a>
-                                        <a href="products.html#equipamentos">Cortinas de Ar</a>
-                                        <a href="products.html#equipamentos">Plataformas</a>
-                                    </div>
-                                </div>
+          <nav class="nav" id="nav">
+            <ul class="nav-list">
+              <li><a href="index.html" class="nav-link active">Home</a></li>
+
+                      <li class="dropdown">
+                        <a href="services.html" class="nav-link">Serviços <span class="arrow">▾</span></a>
+                        <div class="mega-menu services-menu">
+                            <div class="solutions-grid">
+                                <a href="services.html#saude" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="shield-plus"></i></div>
+                                    <span>Soluções de Saúde e Segurança</span>
+                                    <small class="solution-tag">Novo</small>
+                                </a>
+                                <a href="services.html#farmaceutico" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="pill"></i></div>
+                                    <span>Soluções Farmacêuticas</span>
+                                </a>
+                                <a href="services.html#alimentos" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="utensils"></i></div>
+                                    <span>Soluções para Fabricação de Alimentos</span>
+                                </a>
+                                <a href="services.html#refrigerado" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="thermometer-snowflake"></i></div>
+                                    <span>Soluções de armazenamento refrigerado</span>
+                                </a>
+                                <a href="services.html#armazenagem" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="boxes"></i></div>
+                                    <span>Soluções para Armazenagem</span>
+                                </a>
+                                <a href="services.html#fabricacao" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="factory"></i></div>
+                                    <span>Soluções de fabricação</span>
+                                </a>
+                                <a href="services.html#automotivo" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="car"></i></div>
+                                    <span>Soluções Automotivas</span>
+                                </a>
+                                <a href="services.html#autoarmazenamento" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="warehouse"></i></div>
+                                    <span>Soluções de autoarmazenamento</span>
+                                </a>
+                                <a href="services.html#varejo" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="shopping-cart"></i></div>
+                                    <span>Soluções para o Varejo</span>
+                                </a>
+                                <a href="services.html#agricultura" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="tractor"></i></div>
+                                    <span>Soluções para Agricultura</span>
+                                </a>
                             </div>
-                        </li>
-                        <li><a href="success.html" class="nav-link">Histórias de Sucesso</a></li>
-                        <li><a href="about.html" class="nav-link active">Sobre Nós</a></li>
-                        <li><a href="contact.html" class="nav-link">Contato</a></li>
-                        <li><a href="contact.html" class="btn-primary">Solicitar Orçamento</a></li>
-                    </ul>
-                </nav>
+                        </div>
+                    </li>
 
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+              <li class="dropdown">
+                <a href="products.html" class="nav-link"
+                  >Produtos <span class="arrow">▾</span></a
+                >
+
+                <div class="mega-menu products-menu">
+                  <div class="products-grid">
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1582719478248-56e38e21c1b8?w=400&auto=format&fit=crop"
+                        alt="Produtos de reposi??o e seguran?a"
+                      />
+
+                      <span>Produtos de reposição e segurança</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1582719478235-2f5c70b77ae2?w=400&auto=format&fit=crop"
+                        alt="Cortinas de ar comerciais"
+                      />
+
+                      <span>Cortinas de ar comerciais</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&auto=format&fit=crop"
+                        alt="Mesas de tesoura e elevatrias"
+                      />
+
+                      <span>Mesas de tesoura e elevatrias</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1503389152951-9f343605f61e?w=400&auto=format&fit=crop"
+                        alt="Para-choques e cabeos de amarra??o"
+                      />
+
+                      <span>Para-choques e cabeços de amarração</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&auto=format&fit=crop"
+                        alt="Niveladores de doca e acess?rios"
+                      />
+
+                      <span>Niveladores de doca e acessórios</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1529429617124-aee711a10c77?w=400&auto=format&fit=crop"
+                        alt="Selos, abrigos e dossis"
+                      />
+
+                      <span>Selos, abrigos e dossis</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1529429617124-95b109e86b66?w=400&auto=format&fit=crop"
+                        alt="Portas de alta velocidade"
+                      />
+
+                      <span>Portas de alta velocidade</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&auto=format&fit=crop"
+                        alt="Portas e Port?es Comerciais"
+                      />
+
+                      <span>Portas e Portões Comerciais</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=400&auto=format&fit=crop"
+                        alt="Portas de pedestres e portas autom?ticas"
+                      />
+
+                      <span>Portas de pedestres e portas automáticas</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=400&auto=format&fit=crop"
+                        alt="Vedao e tiras de vedao"
+                      />
+
+                      <span>Vedação e tiras de vedação</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1529429617124-95b109e86b66?w=400&auto=format&fit=crop"
+                        alt="Ventiladores e Filtragem de Ar"
+                      />
+
+                      <span>Ventiladores e Filtragem de Ar</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1606813902910-3f5de13ef8dd?w=400&auto=format&fit=crop"
+                        alt="Sistemas de reten??o para reboques e ve?culos"
+                      />
+
+                      <span>Sistemas de retenção para reboques e veículos</span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <a href="success.html" class="nav-link">Histórias de Sucesso</a>
+              </li>
+
+              <li><a href="about.html" class="nav-link">Sobre Nós</a></li>
+
+              <li><a href="contact.html" class="nav-link">Contato</a></li>
+
+              <li>
+                <a href="contact.html" class="btn-primary"
+                  >Solicitar Orçamento</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span></span>
+
+            <span></span>
+
+            <span></span>
+          </button>
         </div>
+      </div>
     </header>
 
+
+
+
     <!-- Page Hero -->
+
     <section class="page-hero">
+
         <div class="page-hero-overlay"></div>
+
         <div class="container">
+
             <div class="page-hero-content" data-aos="fade-up">
-                <h1>Sobre Nós</h1>
-                <p>Conheça nossa história, missão e valores</p>
+
+                <h1>Sobre Ns</h1>
+
+                <p>Conheça nossa história, misso e valores</p>
+
             </div>
+
         </div>
+
     </section>
+
+
 
     <!-- About Intro -->
+
     <section class="about-intro">
+
         <div class="container">
+
             <div class="about-intro-content">
+
                 <div class="about-text" data-aos="fade-right">
+
                     <span class="section-label">Quem Somos</span>
-                    <h2>Líder em Soluções Industriais desde 2002</h2>
+
+                    <h2>Lder em Solues Industriais desde 2002</h2>
+
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
                     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
                 </div>
+
                 <div class="about-image" data-aos="fade-left">
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800" alt="Sobre Nós">
+
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800" alt="Sobre Ns">
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
+
+
 
     <!-- Stats Section -->
+
     <section class="stats-section">
+
         <div class="container">
+
             <div class="stats-grid">
+
                 <div class="stat-box" data-aos="fade-up" data-aos-delay="0">
+
                     <div class="stat-number">20+</div>
+
                     <div class="stat-label">Anos de Experiência</div>
+
                 </div>
+
                 <div class="stat-box" data-aos="fade-up" data-aos-delay="100">
+
                     <div class="stat-number">5000+</div>
-                    <div class="stat-label">Projetos Concluídos</div>
+
+                    <div class="stat-label">Projetos Conclu?dos</div>
+
                 </div>
+
                 <div class="stat-box" data-aos="fade-up" data-aos-delay="200">
+
                     <div class="stat-number">500+</div>
+
                     <div class="stat-label">Clientes Satisfeitos</div>
+
                 </div>
+
                 <div class="stat-box" data-aos="fade-up" data-aos-delay="300">
+
                     <div class="stat-number">50+</div>
+
                     <div class="stat-label">Profissionais Qualificados</div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
+
+
 
     <!-- Mission Vision Values -->
+
     <section class="mvv-section">
+
         <div class="container">
+
             <div class="section-header" data-aos="fade-up">
-                <h2>Missão, Visão e Valores</h2>
+
+                <h2>Misso, Viso e Valores</h2>
+
                 <p>Os pilares que guiam nosso trabalho diariamente</p>
+
             </div>
+
+
 
             <div class="mvv-grid">
+
                 <div class="mvv-card" data-aos="fade-up" data-aos-delay="0">
+
                     <div class="mvv-icon"><i data-lucide="target"></i></div>
-                    <h3>Nossa Missão</h3>
+
+                    <h3>Nossa Misso</h3>
+
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+
                 </div>
+
+
 
                 <div class="mvv-card" data-aos="fade-up" data-aos-delay="100">
+
                     <div class="mvv-icon"><i data-lucide="eye"></i></div>
-                    <h3>Nossa Visão</h3>
+
+                    <h3>Nossa Viso</h3>
+
                     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+
                 </div>
+
+
 
                 <div class="mvv-card" data-aos="fade-up" data-aos-delay="200">
+
                     <div class="mvv-icon"><i data-lucide="star"></i></div>
+
                     <h3>Nossos Valores</h3>
+
                     <ul class="values-list">
-                        <li>✓ Excelência e qualidade</li>
-                        <li>✓ Comprometimento com o cliente</li>
-                        <li>✓ Inovação constante</li>
-                        <li>✓ Integridade e ética</li>
-                        <li>✓ Trabalho em equipe</li>
+
+                        <li>?o" Excelncia e qualidade</li>
+
+                        <li>?o" Comprometimento com o cliente</li>
+
+                        <li>?o" Inovao constante</li>
+
+                        <li>?o" Integridade e ?tica</li>
+
+                        <li>?o" Trabalho em equipe</li>
+
                     </ul>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
+
+
 
     <!-- Timeline -->
+
     <section class="timeline-section">
+
         <div class="container">
+
             <div class="section-header" data-aos="fade-up">
+
                 <h2>Nossa Trajetória</h2>
+
                 <p>Marcos importantes da nossa história</p>
+
             </div>
+
+
 
             <div class="timeline">
+
                 <div class="timeline-item" data-aos="fade-right">
+
                     <div class="timeline-year">2002</div>
+
                     <div class="timeline-content">
-                        <h3>Fundação da Empresa</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Início das operações com foco em soluções industriais.</p>
+
+                        <h3>Fundao da Empresa</h3>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Início das operaes com foco em solues industriais.</p>
+
                     </div>
+
                 </div>
 
+
+
                 <div class="timeline-item" data-aos="fade-left">
+
                     <div class="timeline-year">2008</div>
+
                     <div class="timeline-content">
-                        <h3>Expansão Nacional</h3>
-                        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Abertura de novos escritórios.</p>
+
+                        <h3>Expanso Nacional</h3>
+
+                        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Abertura de novos escritrios.</p>
+
                     </div>
+
                 </div>
 
+
+
                 <div class="timeline-item" data-aos="fade-right">
+
                     <div class="timeline-year">2015</div>
+
                     <div class="timeline-content">
+
                         <h3>Certificações Internacionais</h3>
+
                         <p>Ut enim ad minim veniam, quis nostrud exercitation. Conquista de certificações de qualidade.</p>
+
                     </div>
+
                 </div>
+
+
 
                 <div class="timeline-item" data-aos="fade-left">
+
                     <div class="timeline-year">2020</div>
+
                     <div class="timeline-content">
-                        <h3>Líder de Mercado</h3>
-                        <p>Duis aute irure dolor in reprehenderit. Reconhecimento como líder em soluções industriais.</p>
+
+                        <h3>Lder de Mercado</h3>
+
+                        <p>Duis aute irure dolor in reprehenderit. Reconhecimento como lder em solues industriais.</p>
+
                     </div>
+
                 </div>
 
+
+
                 <div class="timeline-item" data-aos="fade-right">
+
                     <div class="timeline-year">2024</div>
+
                     <div class="timeline-content">
-                        <h3>Inovação e Tecnologia</h3>
+
+                        <h3>Inovao e Tecnologia</h3>
+
                         <p>Excepteur sint occaecat cupidatat. Investimento em novas tecnologias e processos sustentáveis.</p>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
+
+
 
     <!-- Team Section -->
+
     <section class="team-section">
+
         <div class="container">
+
             <div class="section-header" data-aos="fade-up">
+
                 <h2>Nossa Equipe</h2>
-                <p>Profissionais qualificados e comprometidos com a excelência</p>
+
+                <p>Profissionais qualificados e comprometidos com a excelncia</p>
+
             </div>
+
+
 
             <div class="team-grid">
+
                 <div class="team-member" data-aos="fade-up" data-aos-delay="0">
+
                     <div class="member-image">
+
                         <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400" alt="Membro da Equipe">
+
                     </div>
+
                     <div class="member-info">
+
                         <h3>Nome do Profissional</h3>
+
                         <p class="member-role">Diretor Geral</p>
-                        <p class="member-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Especialista em gestão empresarial.</p>
+
+                        <p class="member-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Especialista em gesto empresarial.</p>
+
                     </div>
+
                 </div>
+
+
 
                 <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+
                     <div class="member-image">
+
                         <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400" alt="Membro da Equipe">
+
                     </div>
+
                     <div class="member-info">
+
                         <h3>Nome do Profissional</h3>
+
                         <p class="member-role">Gerente Técnico</p>
-                        <p class="member-bio">Sed do eiusmod tempor incididunt. Mais de 15 anos de experiência em projetos industriais.</p>
+
+                        <p class="member-bio">Sed do eiusmod tempor incididunt. Mais de 15 anos de experi?ncia em projetos industriais.</p>
+
                     </div>
+
                 </div>
+
+
 
                 <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+
                     <div class="member-image">
+
                         <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400" alt="Membro da Equipe">
+
                     </div>
+
                     <div class="member-info">
+
                         <h3>Nome do Profissional</h3>
+
                         <p class="member-role">Coordenador de Projetos</p>
+
                         <p class="member-bio">Ut enim ad minim veniam. Especialista em planejamento e execução de projetos complexos.</p>
+
                     </div>
+
                 </div>
+
+
 
                 <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+
                     <div class="member-image">
+
                         <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400" alt="Membro da Equipe">
+
                     </div>
+
                     <div class="member-info">
+
                         <h3>Nome do Profissional</h3>
+
                         <p class="member-role">Gerente Comercial</p>
-                        <p class="member-bio">Quis nostrud exercitation ullamco. Focada em relacionamento com clientes e expansão de negócios.</p>
+
+                        <p class="member-bio">Quis nostrud exercitation ullamco. Focada em relacionamento com clientes e expanso de negcios.</p>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
+
+
 
     <!-- CTA Section -->
+
     <section class="cta-section">
+
         <div class="container">
+
             <div class="cta-content">
+
                 <h2 data-aos="fade-up">Quer Fazer Parte da Nossa História?</h2>
-                <p data-aos="fade-up" data-aos-delay="100">Entre em contato e descubra como podemos ajudar seu negócio a crescer.</p>
+
+                <p data-aos="fade-up" data-aos-delay="100">Entre em contato e descubra como podemos ajudar seu negcio a crescer.</p>
+
                 <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+
                     <a href="contact.html" class="btn-primary">Fale Conosco</a>
-                    <a href="services.html" class="btn-secondary">Conheça Nossos Serviços</a>
+
+                    <a href="services.html" class="btn-secondary">Conheça Nossos Servios</a>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
+
+
     <!-- Footer -->
+
     <footer class="footer">
+
         <div class="container">
+
             <div class="footer-grid">
+
                 <div class="footer-column">
+
                     <h3>Northern Dock Systems</h3>
-                    <p>Melhorando segurança, produtividade e eficiência energética desde 2002.</p>
+
+                    <p>Melhorando Segurana, produtividade e Eficincia energtica desde 2002.</p>
+
                     <div class="social-links">
+
                         <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook"></a>
+
                         <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter"></a>
+
                         <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"></a>
+
                     </div>
+
                 </div>
 
+
+
                 <div class="footer-column">
-                    <h3>Links Rápidos</h3>
+
+                    <h3>Links Rpidos</h3>
+
                     <ul>
+
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Serviços</a></li>
+
+                        <li><a href="services.html">Servios</a></li>
+
                         <li><a href="products.html">Produtos</a></li>
-                        <li><a href="about.html">Sobre Nós</a></li>
+
+                        <li><a href="about.html">Sobre Ns</a></li>
+
                         <li><a href="contact.html">Contato</a></li>
+
                     </ul>
+
                 </div>
 
+
+
                 <div class="footer-column">
-                    <h3>Nossos Serviços</h3>
+
+                    <h3>Nossos Servios</h3>
+
                     <ul>
-                        <li><a href="services.html">Serviço 24/7</a></li>
-                        <li><a href="services.html">Manutenção Preventiva</a></li>
-                        <li><a href="services.html">Instalações</a></li>
-                        <li><a href="services.html">Construção</a></li>
-                        <li><a href="services.html">Eficiência Energética</a></li>
+
+                        <li><a href="services.html">Servio 24/7</a></li>
+
+                        <li><a href="services.html">Manuteno Preventiva</a></li>
+
+                        <li><a href="services.html">Instalaes</a></li>
+
+                        <li><a href="services.html">Construo</a></li>
+
+                        <li><a href="services.html">Eficincia Energtica</a></li>
+
                     </ul>
+
                 </div>
 
+
+
                 <div class="footer-column">
+
                     <h3>Contato</h3>
+
                     <ul class="contact-info">
+
                         <li><i data-lucide="map-pin" class="footer-icon"></i> Rua Exemplo, 123<br><span class="footer-indent">Cidade, Estado - CEP 00000-000</span></li>
+
                         <li><i data-lucide="phone" class="footer-icon"></i> <a href="tel:18666011758">1-866-601-1758</a></li>
+
                         <li><i data-lucide="mail" class="footer-icon"></i> <a href="mailto:info@exemplo.com">info@exemplo.com</a></li>
+
                     </ul>
+
                 </div>
+
             </div>
+
         </div>
+
+
 
         <div class="footer-bottom">
+
             <div class="container">
+
                 <p>&copy; 2026 Northern Dock Systems. Todos os direitos reservados.</p>
+
                 <div class="footer-links">
-                    <a href="#">Política de Privacidade</a>
+
+                    <a href="#">Pol?tica de Privacidade</a>
+
                     <a href="#">Termos de Uso</a>
+
                 </div>
+
             </div>
+
         </div>
+
     </footer>
 
+
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script src="js/script.js"></script>
+
     <script>
+
         lucide.createIcons();
+
     </script>
+
 </body>
+
 </html>
+
+
+
+
+
+
+

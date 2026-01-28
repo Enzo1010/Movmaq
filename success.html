@@ -1,241 +1,343 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Histórias de Sucesso - Northern Dock Systems</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js"></script>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Histórias de Sucesso</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js"></script>
+
 </head>
+
 <body>
+ <!-- Emergency Promo Bar -->
+
+    <div class="top-banner">
+      <div class="container banner-content">
+        <p>
+          Serviço de emergência e reparos 24 horas por dia, 7 dias por semana, com
+          identificação da causa raiz e soluções na primeira visita.
+        </p>
+
+        <a href="contact.html" class="btn-banner">Solicitar servio</a>
+      </div>
+
+      <button class="banner-close" aria-label="Fechar aviso">×</button>
+    </div>
+
+    <!-- Secondary Utility Bar -->
+
+    <div class="utility-bar">
+      <div class="container utility-content">
+        <div class="utility-alert">
+          <i data-lucide="wrench" aria-hidden="true"></i>
+
+          <span>Serviço de emergência 24 horas por dia, 7 dias por semana</span>
+        </div>
+
+        <div class="utility-actions">
+          <a href="contact.html" class="utility-btn info">
+            <i data-lucide="info" aria-hidden="true"></i>
+
+            Solicite um orçamento
+          </a>
+
+          <a href="contact.html#chat" class="utility-btn chat">
+            <i data-lucide="message-circle" aria-hidden="true"></i>
+
+            Iniciar um bate-papo
+          </a>
+        </div>
+      </div>
+    </div>
 
     <!-- Header -->
+
     <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="index.html">
-                        <h2>NORTHERN DOCK SYSTEMS</h2>
-                    </a>
-                </div>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <a href="index.html">
+              <img src="images/logo1.svg" alt="Northern Dock Systems logo" />
+            </a>
+          </div>
 
-                <nav class="nav" id="nav">
-                    <ul class="nav-list">
-                        <li><a href="index.html" class="nav-link">Home</a></li>
-                        <li><a href="services.html" class="nav-link">Serviços</a></li>
-                        <li class="dropdown">
-                            <a href="products.html" class="nav-link">Produtos <span class="arrow">▼</span></a>
-                            <div class="mega-menu">
-                                <div class="mega-menu-content">
-                                    <div class="mega-menu-column">
-                                        <h3>Portas</h3>
-                                        <a href="#">Portas Comerciais</a>
-                                        <a href="#">Portas Alta Velocidade</a>
-                                        <a href="#">Portões Automáticos</a>
-                                    </div>
-                                    <div class="mega-menu-column">
-                                        <h3>Docas</h3>
-                                        <a href="#">Niveladoras de Doca</a>
-                                        <a href="#">Selos e Abrigos</a>
-                                        <a href="#">Para-choques</a>
-                                    </div>
-                                    <div class="mega-menu-column">
-                                        <h3>Equipamentos</h3>
-                                        <a href="#">Ventiladores HVLS</a>
-                                        <a href="#">Cortinas de Ar</a>
-                                        <a href="#">Plataformas</a>
-                                    </div>
-                                </div>
+          <nav class="nav" id="nav">
+            <ul class="nav-list">
+              <li><a href="index.html" class="nav-link active">Home</a></li>
+
+                      <li class="dropdown">
+                        <a href="services.html" class="nav-link">Serviços <span class="arrow">▾</span></a>
+                        <div class="mega-menu services-menu">
+                            <div class="solutions-grid">
+                                <a href="services.html#saude" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="shield-plus"></i></div>
+                                    <span>Soluções de Saúde e Segurança</span>
+                                    <small class="solution-tag">Novo</small>
+                                </a>
+                                <a href="services.html#farmaceutico" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="pill"></i></div>
+                                    <span>Soluções Farmacêuticas</span>
+                                </a>
+                                <a href="services.html#alimentos" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="utensils"></i></div>
+                                    <span>Soluções para Fabricação de Alimentos</span>
+                                </a>
+                                <a href="services.html#refrigerado" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="thermometer-snowflake"></i></div>
+                                    <span>Soluções de armazenamento refrigerado</span>
+                                </a>
+                                <a href="services.html#armazenagem" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="boxes"></i></div>
+                                    <span>Soluções para Armazenagem</span>
+                                </a>
+                                <a href="services.html#fabricacao" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="factory"></i></div>
+                                    <span>Soluções de fabricação</span>
+                                </a>
+                                <a href="services.html#automotivo" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="car"></i></div>
+                                    <span>Soluções Automotivas</span>
+                                </a>
+                                <a href="services.html#autoarmazenamento" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="warehouse"></i></div>
+                                    <span>Soluções de autoarmazenamento</span>
+                                </a>
+                                <a href="services.html#varejo" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="shopping-cart"></i></div>
+                                    <span>Soluções para o Varejo</span>
+                                </a>
+                                <a href="services.html#agricultura" class="solution-card">
+                                    <div class="solution-icon"><i data-lucide="tractor"></i></div>
+                                    <span>Soluções para Agricultura</span>
+                                </a>
                             </div>
-                        </li>
-                        <li><a href="success.html" class="nav-link active">Histórias de Sucesso</a></li>
-                        <li><a href="about.html" class="nav-link">Sobre Nós</a></li>
-                        <li><a href="contact.html" class="nav-link">Contato</a></li>
-                        <li><a href="contact.html" class="btn-primary">Solicitar Orçamento</a></li>
-                    </ul>
-                </nav>
+                        </div>
+                    </li>
 
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+              <li class="dropdown">
+                <a href="products.html" class="nav-link"
+                  >Produtos <span class="arrow">▾</span></a
+                >
+
+                <div class="mega-menu products-menu">
+                  <div class="products-grid">
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1582719478248-56e38e21c1b8?w=400&auto=format&fit=crop"
+                        alt="Produtos de reposi??o e seguran?a"
+                      />
+
+                      <span>Produtos de reposição e segurança</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1582719478235-2f5c70b77ae2?w=400&auto=format&fit=crop"
+                        alt="Cortinas de ar comerciais"
+                      />
+
+                      <span>Cortinas de ar comerciais</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&auto=format&fit=crop"
+                        alt="Mesas de tesoura e elevatrias"
+                      />
+
+                      <span>Mesas de tesoura e elevatrias</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1503389152951-9f343605f61e?w=400&auto=format&fit=crop"
+                        alt="Para-choques e cabeos de amarra??o"
+                      />
+
+                      <span>Para-choques e cabeços de amarração</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&auto=format&fit=crop"
+                        alt="Niveladores de doca e acess?rios"
+                      />
+
+                      <span>Niveladores de doca e acessórios</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1529429617124-aee711a10c77?w=400&auto=format&fit=crop"
+                        alt="Selos, abrigos e dossis"
+                      />
+
+                      <span>Selos, abrigos e dossis</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1529429617124-95b109e86b66?w=400&auto=format&fit=crop"
+                        alt="Portas de alta velocidade"
+                      />
+
+                      <span>Portas de alta velocidade</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&auto=format&fit=crop"
+                        alt="Portas e Port?es Comerciais"
+                      />
+
+                      <span>Portas e Portões Comerciais</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=400&auto=format&fit=crop"
+                        alt="Portas de pedestres e portas autom?ticas"
+                      />
+
+                      <span>Portas de pedestres e portas automáticas</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=400&auto=format&fit=crop"
+                        alt="Vedao e tiras de vedao"
+                      />
+
+                      <span>Vedação e tiras de vedação</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1529429617124-95b109e86b66?w=400&auto=format&fit=crop"
+                        alt="Ventiladores e Filtragem de Ar"
+                      />
+
+                      <span>Ventiladores e Filtragem de Ar</span>
+                    </a>
+
+                    <a href="products.html" class="product-card">
+                      <img
+                        src="https://images.unsplash.com/photo-1606813902910-3f5de13ef8dd?w=400&auto=format&fit=crop"
+                        alt="Sistemas de reten??o para reboques e ve?culos"
+                      />
+
+                      <span>Sistemas de retenção para reboques e veículos</span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <a href="success.html" class="nav-link">Histórias de Sucesso</a>
+              </li>
+
+              <li><a href="about.html" class="nav-link">Sobre Nós</a></li>
+
+              <li><a href="contact.html" class="nav-link">Contato</a></li>
+
+              <li>
+                <a href="contact.html" class="btn-primary"
+                  >Solicitar Orçamento</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span></span>
+
+            <span></span>
+
+            <span></span>
+          </button>
         </div>
+      </div>
     </header>
 
-    <!-- Page Hero -->
+
+  <main class="success-page">
     <section class="success-hero">
-        <div class="container">
-            <div class="breadcrumb">Página inicial · Histórias de sucesso</div>
-            <h1>Histórias de sucesso de clientes</h1>
-            <p>Consulte nosso mapa interativo para encontrar um caso de sucesso em sua região, setor ou necessidade de equipamentos.</p>
-            <div class="hero-actions">
-                <a href="contact.html" class="btn-primary">Fale com um especialista</a>
-                <a href="#cases" class="btn-outline">Ver casos</a>
-            </div>
-        </div>
+      <div class="container">
+        <h1>Histórias de Sucesso</h1>
+        <p>Projetos reais onde nossas soluções reduziram custos, elevaram a segurança e aumentaram a produtividade.</p>
+      </div>
     </section>
 
-    <!-- Success Stories Grid -->
-    <section class="success-stories" id="cases">
-        <div class="container">
-            <div class="success-grid">
-                <div class="case-card" data-aos="fade-up" data-aos-delay="0">
-                    <div class="case-tag">Logística</div>
-                    <h3>Modernização de docas em Toronto</h3>
-                    <p>Substituímos três niveladoras e selos, reduzindo em 18% a perda de energia e acelerando o tempo de carregamento.</p>
-                    <ul class="case-meta">
-                        <li><i data-lucide="map-pin"></i> Toronto, ON</li>
-                        <li><i data-lucide="clock-3"></i> Prazo: 3 semanas</li>
-                    </ul>
-                    <div class="case-result"><strong>Resultado:</strong> -18% perdas térmicas e +12% produtividade.</div>
-                    <a href="#" class="case-link">Ler história</a>
-                </div>
-
-                <div class="case-card" data-aos="fade-up" data-aos-delay="80">
-                    <div class="case-tag">Varejo</div>
-                    <h3>Portas rápidas em centro de distribuição</h3>
-                    <p>Instalamos portas de alta velocidade com sensores de presença, reduzindo colisões e paradas não programadas.</p>
-                    <ul class="case-meta">
-                        <li><i data-lucide="map-pin"></i> Calgary, AB</li>
-                        <li><i data-lucide="shield-check"></i> 0 incidentes em 6 meses</li>
-                    </ul>
-                    <div class="case-result"><strong>Resultado:</strong> 25% menos tempo de ciclo em docas críticas.</div>
-                    <a href="#" class="case-link">Ler história</a>
-                </div>
-
-                <div class="case-card" data-aos="fade-up" data-aos-delay="160">
-                    <div class="case-tag">Alimentos & Bebidas</div>
-                    <h3>Controle climático em câmaras frias</h3>
-                    <p>Integração de cortinas de ar e gaxetas premium para manter temperatura e reduzir condensação em linhas de envase.</p>
-                    <ul class="case-meta">
-                        <li><i data-lucide="map-pin"></i> Montreal, QC</li>
-                        <li><i data-lucide="thermometer"></i> -2°C estáveis</li>
-                    </ul>
-                    <div class="case-result"><strong>Resultado:</strong> economia anual estimada de CAD 42k em energia.</div>
-                    <a href="#" class="case-link">Ler história</a>
-                </div>
-
-                <div class="case-card" data-aos="fade-up" data-aos-delay="240">
-                    <div class="case-tag">Manufatura</div>
-                    <h3>Programa de manutenção preventiva</h3>
-                    <p>Plano customizado de inspeções trimestrais para 28 portas e 12 niveladoras, com peças críticas em estoque móvel.</p>
-                    <ul class="case-meta">
-                        <li><i data-lucide="map-pin"></i> Windsor, ON</li>
-                        <li><i data-lucide="wrench"></i> 24/7 emergencial</li>
-                    </ul>
-                    <div class="case-result"><strong>Resultado:</strong> -40% paradas corretivas e SLA de resposta de 2h.</div>
-                    <a href="#" class="case-link">Ler história</a>
-                </div>
-
-                <div class="case-card" data-aos="fade-up" data-aos-delay="320">
-                    <div class="case-tag">Transporte</div>
-                    <h3>Retrofit de portas seccionais</h3>
-                    <p>Conversão para acionamento automatizado com controles de segurança e sensores de alinhamento de caminhões.</p>
-                    <ul class="case-meta">
-                        <li><i data-lucide="map-pin"></i> Vancouver, BC</li>
-                        <li><i data-lucide="cpu"></i> Controles inteligentes</li>
-                    </ul>
-                    <div class="case-result"><strong>Resultado:</strong> redução de 30% em danos a portas e para-choques.</div>
-                    <a href="#" class="case-link">Ler história</a>
-                </div>
-
-                <div class="case-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="case-tag">Saúde</div>
-                    <h3>Docas silenciosas para hospital</h3>
-                    <p>Instalação de portas de alta vedação e amortecedores para minimizar ruído e vibração em entregas noturnas.</p>
-                    <ul class="case-meta">
-                        <li><i data-lucide="map-pin"></i> Ottawa, ON</li>
-                        <li><i data-lucide="moon-star"></i> Operação 24/7</li>
-                    </ul>
-                    <div class="case-result"><strong>Resultado:</strong> ruído externo reduzido em 9 dB medidos.</div>
-                    <a href="#" class="case-link">Ler história</a>
-                </div>
+    <section class="success-stories">
+      <div class="container">
+        <div class="success-grid">
+          <article class="success-card">
+            <div class="success-image">
+              <img src="https://images.unsplash.com/photo-1582719478248-56e38e21c1b8?w=900&auto=format&fit=crop" alt="Cortina de ar em doca logística">
+              <span class="success-tag">Eficiência Energética</span>
             </div>
+            <div class="success-body">
+              <h3>Descontos de energia para cortinas de ar – Tango International</h3>
+              <p>As cortinas de ar reduziram a perda de calor e geraram economia anual estimada de US$ 2.876, com até 95% de desconto em energia.</p>
+              <a class="btn-primary btn-read-more" href="#">Leia mais</a>
+            </div>
+          </article>
+
+          <article class="success-card">
+            <div class="success-image">
+              <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=900&auto=format&fit=crop" alt="Porta de congelador industrial">
+              <span class="success-tag">Segurança Alimentar</span>
+            </div>
+            <div class="success-body">
+              <h3>Portas de congeladores – Instalações alimentares de Etobicoke</h3>
+              <p>Portas defeituosas foram modernizadas com sistemas de vedação e aquecimento, eliminando gelo, aumentando a segurança e a eficiência.</p>
+              <a class="btn-primary btn-read-more" href="#">Leia mais</a>
+            </div>
+          </article>
+
+          <article class="success-card">
+            <div class="success-image">
+              <img src="https://images.unsplash.com/photo-1508896694512-1eade558679a?w=900&auto=format&fit=crop" alt="Caminhão em área com neve">
+              <span class="success-tag">Operação 24/7</span>
+            </div>
+            <div class="success-body">
+              <h3>Remoção de neve com reboque – Instalação alimentar em Ottawa</h3>
+              <p>Produção retomada em segurança após remoção rápida de neve e gelo, melhorando proteção de produto e reduzindo paradas.</p>
+              <a class="btn-primary btn-read-more" href="#">Leia mais</a>
+            </div>
+          </article>
+
+          <article class="success-card">
+            <div class="success-image">
+              <img src="https://images.unsplash.com/photo-1581092152835-30ab079f19b9?w=900&auto=format&fit=crop" alt="Galpão com nível de doca automatizado">
+              <span class="success-tag">Automação</span>
+            </div>
+            <div class="success-body">
+              <h3>Niveladores de doca inteligentes – Centro de distribuição</h3>
+              <p>Instalação de niveladores hidráulicos e travas de reboque reduziu acidentes e acelerou o carregamento em 18%.</p>
+              <a class="btn-primary btn-read-more" href="#">Leia mais</a>
+            </div>
+          </article>
         </div>
+      </div>
     </section>
+  </main>
 
-    <!-- CTA -->
-    <section class="success-cta">
-        <div class="container cta-wrap">
-            <div>
-                <h3>Pronto para escrever a próxima história?</h3>
-                <p>Nossa equipe pode avaliar sua operação e propor melhorias em até 48h.</p>
-            </div>
-            <div class="cta-buttons">
-                <a href="contact.html" class="btn-primary">Solicitar serviço</a>
-                <a href="contact.html" class="btn-outline">Solicitar orçamento</a>
-            </div>
-        </div>
-    </section>
+  <script>lucide.createIcons();</script>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h3>Northern Dock Systems</h3>
-                    <p>Melhorando segurança, produtividade e eficiência energética desde 2002.</p>
-                    <div class="social-links">
-                        <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook"></a>
-                        <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg" alt="Twitter"></a>
-                        <a href="#"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" alt="LinkedIn"></a>
-                    </div>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Links Rápidos</h3>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Serviços</a></li>
-                        <li><a href="products.html">Produtos</a></li>
-                        <li><a href="about.html">Sobre Nós</a></li>
-                        <li><a href="contact.html">Contato</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Nossos Serviços</h3>
-                    <ul>
-                        <li><a href="services.html">Serviço 24/7</a></li>
-                        <li><a href="services.html">Manutenção Preventiva</a></li>
-                        <li><a href="services.html">Instalações</a></li>
-                        <li><a href="services.html">Construção</a></li>
-                        <li><a href="services.html">Eficiência Energética</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h3>Contato</h3>
-                    <ul class="contact-info">
-                        <li><i data-lucide="map-pin" class="footer-icon"></i> Rua Exemplo, 123<br><span class="footer-indent">Cidade, Estado - CEP 00000-000</span></li>
-                        <li><i data-lucide="phone" class="footer-icon"></i> <a href="tel:18666011758">1-866-601-1758</a></li>
-                        <li><i data-lucide="mail" class="footer-icon"></i> <a href="mailto:info@exemplo.com">info@exemplo.com</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2026 Northern Dock Systems. Todos os direitos reservados.</p>
-                <div class="footer-links">
-                    <a href="#">Política de Privacidade</a>
-                    <a href="#">Termos de Uso</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        lucide.createIcons();
-        if (typeof AOS !== 'undefined') { AOS.init({ duration: 1000, once: true, offset: 100 }); }
-    </script>
-    <script src="js/script.js"></script>
 </body>
+
 </html>
+
+
+
+
+
