@@ -1,39 +1,34 @@
-<!DOCTYPE html>
+<!doctype html>
 
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
 
-<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta charset="UTF-8">
+  <title>Movmaq | Histórias de Sucesso</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
 
-  <title>Histórias de Sucesso</title>
+    <script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js"></script>
+  </head>
 
-  <link rel="stylesheet" href="css/style.css">
-
-  <script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js"></script>
-
-</head>
-
-<body>
- <!-- Emergency Promo Bar -->
-
+  <body>
+    <!-- Emergency Promo Bar -->
     <div class="top-banner">
       <div class="container banner-content">
         <p>
-          Serviço de emergência e reparos 24 horas por dia, 7 dias por semana, com
-          identificação da causa raiz e soluções na primeira visita.
+          Serviço de emergência e reparos 24 horas por dia, 7 dias por semana,
+          com identificação da causa raiz e soluções na primeira visita.
         </p>
 
-        <a href="contact.html" class="btn-banner">Solicitar servio</a>
+        <a href="contact.html" class="btn-banner">Solicitar serviço</a>
       </div>
 
       <button class="banner-close" aria-label="Fechar aviso">×</button>
     </div>
 
     <!-- Secondary Utility Bar -->
-
     <div class="utility-bar">
       <div class="container utility-content">
         <div class="utility-alert">
@@ -45,13 +40,11 @@
         <div class="utility-actions">
           <a href="contact.html" class="utility-btn info">
             <i data-lucide="info" aria-hidden="true"></i>
-
             Solicite um orçamento
           </a>
 
-          <a href="contact.html#chat" class="utility-btn chat">
+          <a href="" class="utility-btn chat">
             <i data-lucide="message-circle" aria-hidden="true"></i>
-
             Iniciar um bate-papo
           </a>
         </div>
@@ -59,68 +52,90 @@
     </div>
 
     <!-- Header -->
-
     <header class="header">
       <div class="container">
         <div class="header-content">
           <div class="logo">
             <a href="index.html">
-              <img src="images/logo1.svg" alt="Northern Dock Systems logo" />
+              <img src="images/logo1.svg" alt="Logo Movmaq" />
             </a>
           </div>
 
           <nav class="nav" id="nav">
             <ul class="nav-list">
-              <li><a href="index.html" class="nav-link active">Home</a></li>
+              <li><a href="index.html" class="nav-link">Home</a></li>
 
-                      <li class="dropdown">
-                        <a href="services.html" class="nav-link">Serviços <span class="arrow">▾</span></a>
-                        <div class="mega-menu services-menu">
-                            <div class="solutions-grid">
-                                <a href="services.html#saude" class="solution-card">
-                                    <div class="solution-icon"><i data-lucide="shield-plus"></i></div>
-                                    <span>Soluções de Saúde e Segurança</span>
-                                    <small class="solution-tag">Novo</small>
-                                </a>
-                                <a href="services.html#farmaceutico" class="solution-card">
-                                    <div class="solution-icon"><i data-lucide="pill"></i></div>
-                                    <span>Soluções Farmacêuticas</span>
-                                </a>
-                                <a href="services.html#alimentos" class="solution-card">
-                                    <div class="solution-icon"><i data-lucide="utensils"></i></div>
-                                    <span>Soluções para Fabricação de Alimentos</span>
-                                </a>
-                                <a href="services.html#refrigerado" class="solution-card">
-                                    <div class="solution-icon"><i data-lucide="thermometer-snowflake"></i></div>
-                                    <span>Soluções de armazenamento refrigerado</span>
-                                </a>
-                                <a href="services.html#armazenagem" class="solution-card">
-                                    <div class="solution-icon"><i data-lucide="boxes"></i></div>
-                                    <span>Soluções para Armazenagem</span>
-                                </a>
-                                <a href="services.html#fabricacao" class="solution-card">
-                                    <div class="solution-icon"><i data-lucide="factory"></i></div>
-                                    <span>Soluções de fabricação</span>
-                                </a>
-                                <a href="services.html#automotivo" class="solution-card">
-                                    <div class="solution-icon"><i data-lucide="car"></i></div>
-                                    <span>Soluções Automotivas</span>
-                                </a>
-                                <a href="services.html#autoarmazenamento" class="solution-card">
-                                    <div class="solution-icon"><i data-lucide="warehouse"></i></div>
-                                    <span>Soluções de autoarmazenamento</span>
-                                </a>
-                                <a href="services.html#varejo" class="solution-card">
-                                    <div class="solution-icon"><i data-lucide="shopping-cart"></i></div>
-                                    <span>Soluções para o Varejo</span>
-                                </a>
-                                <a href="services.html#agricultura" class="solution-card">
-                                    <div class="solution-icon"><i data-lucide="tractor"></i></div>
-                                    <span>Soluções para Agricultura</span>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
+              <li class="dropdown">
+                <a href="services.html" class="nav-link"
+                  >Serviços <span class="arrow">▾</span></a
+                >
+                <div class="mega-menu services-menu">
+                  <div class="solutions-grid">
+                    <a href="services.html#saude" class="solution-card">
+                      <div class="solution-icon">
+                        <i data-lucide="shield-plus"></i>
+                      </div>
+                      <span>Soluções de Saúde e Segurança</span>
+                      <small class="solution-tag">Novo</small>
+                    </a>
+                    <a href="services.html#farmaceutico" class="solution-card">
+                      <div class="solution-icon">
+                        <i data-lucide="pill"></i>
+                      </div>
+                      <span>Soluções Farmacêuticas</span>
+                    </a>
+                    <a href="services.html#alimentos" class="solution-card">
+                      <div class="solution-icon">
+                        <i data-lucide="utensils"></i>
+                      </div>
+                      <span>Soluções para Fabricação de Alimentos</span>
+                    </a>
+                    <a href="services.html#refrigerado" class="solution-card">
+                      <div class="solution-icon">
+                        <i data-lucide="thermometer-snowflake"></i>
+                      </div>
+                      <span>Soluções de armazenamento refrigerado</span>
+                    </a>
+                    <a href="services.html#armazenagem" class="solution-card">
+                      <div class="solution-icon">
+                        <i data-lucide="boxes"></i>
+                      </div>
+                      <span>Soluções para Armazenagem</span>
+                    </a>
+                    <a href="services.html#fabricacao" class="solution-card">
+                      <div class="solution-icon">
+                        <i data-lucide="factory"></i>
+                      </div>
+                      <span>Soluções de fabricação</span>
+                    </a>
+                    <a href="services.html#automotivo" class="solution-card">
+                      <div class="solution-icon"><i data-lucide="car"></i></div>
+                      <span>Soluções Automotivas</span>
+                    </a>
+                    <a
+                      href="services.html#autoarmazenamento"
+                      class="solution-card"
+                    >
+                      <div class="solution-icon">
+                        <i data-lucide="warehouse"></i>
+                      </div>
+                      <span>Soluções de autoarmazenamento</span>
+                    </a>
+                    <a href="services.html#varejo" class="solution-card">
+                      <div class="solution-icon">
+                        <i data-lucide="shopping-cart"></i>
+                      </div>
+                      <span>Soluções para o Varejo</span>
+                    </a>
+                    <a href="services.html#agricultura" class="solution-card">
+                      <div class="solution-icon">
+                        <i data-lucide="tractor"></i>
+                      </div>
+                      <span>Soluções para Agricultura</span>
+                    </a>
+                  </div>
+                </div>
+              </li>
 
               <li class="dropdown">
                 <a href="products.html" class="nav-link"
@@ -130,110 +145,62 @@
                 <div class="mega-menu products-menu">
                   <div class="products-grid">
                     <a href="products.html" class="product-card">
-                      <img
-                        src="https://images.unsplash.com/photo-1582719478248-56e38e21c1b8?w=400&auto=format&fit=crop"
-                        alt="Produtos de reposi??o e seguran?a"
-                      />
-
+                      <img src="https://picsum.photos/200/300" alt="Imagem Aleatória">
                       <span>Produtos de reposição e segurança</span>
                     </a>
 
                     <a href="products.html" class="product-card">
-                      <img
-                        src="https://images.unsplash.com/photo-1582719478235-2f5c70b77ae2?w=400&auto=format&fit=crop"
-                        alt="Cortinas de ar comerciais"
-                      />
-
+                       <img src="https://picsum.photos/200/300" alt="Imagem Aleatória">
                       <span>Cortinas de ar comerciais</span>
                     </a>
 
                     <a href="products.html" class="product-card">
-                      <img
-                        src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&auto=format&fit=crop"
-                        alt="Mesas de tesoura e elevatrias"
-                      />
-
-                      <span>Mesas de tesoura e elevatrias</span>
+                       <img src="https://picsum.photos/200/300" alt="Imagem Aleatória">
+                      <span>Mesas de tesoura e elevatórias</span>
                     </a>
 
                     <a href="products.html" class="product-card">
-                      <img
-                        src="https://images.unsplash.com/photo-1503389152951-9f343605f61e?w=400&auto=format&fit=crop"
-                        alt="Para-choques e cabeos de amarra??o"
-                      />
-
+                       <img src="https://picsum.photos/200/300" alt="Imagem Aleatória">
                       <span>Para-choques e cabeços de amarração</span>
                     </a>
 
                     <a href="products.html" class="product-card">
-                      <img
-                        src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&auto=format&fit=crop"
-                        alt="Niveladores de doca e acess?rios"
-                      />
-
+                       <img src="https://picsum.photos/200/300" alt="Imagem Aleatória">
                       <span>Niveladores de doca e acessórios</span>
                     </a>
 
                     <a href="products.html" class="product-card">
-                      <img
-                        src="https://images.unsplash.com/photo-1529429617124-aee711a10c77?w=400&auto=format&fit=crop"
-                        alt="Selos, abrigos e dossis"
-                      />
-
-                      <span>Selos, abrigos e dossis</span>
+                       <img src="https://picsum.photos/200/300" alt="Imagem Aleatória">
+                      <span>Selos, abrigos e dosséis</span>
                     </a>
 
                     <a href="products.html" class="product-card">
-                      <img
-                        src="https://images.unsplash.com/photo-1529429617124-95b109e86b66?w=400&auto=format&fit=crop"
-                        alt="Portas de alta velocidade"
-                      />
-
+                       <img src="https://picsum.photos/200/300" alt="Imagem Aleatória">
                       <span>Portas de alta velocidade</span>
                     </a>
 
                     <a href="products.html" class="product-card">
-                      <img
-                        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&auto=format&fit=crop"
-                        alt="Portas e Port?es Comerciais"
-                      />
-
+                      <img src="https://picsum.photos/200/300" alt="Imagem Aleatória">
                       <span>Portas e Portões Comerciais</span>
                     </a>
 
                     <a href="products.html" class="product-card">
-                      <img
-                        src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=400&auto=format&fit=crop"
-                        alt="Portas de pedestres e portas autom?ticas"
-                      />
-
+                       <img src="https://picsum.photos/200/300" alt="Imagem Aleatória">
                       <span>Portas de pedestres e portas automáticas</span>
                     </a>
 
                     <a href="products.html" class="product-card">
-                      <img
-                        src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=400&auto=format&fit=crop"
-                        alt="Vedao e tiras de vedao"
-                      />
-
+                      <img src="https://picsum.photos/200/300" alt="Imagem Aleatória">
                       <span>Vedação e tiras de vedação</span>
                     </a>
 
                     <a href="products.html" class="product-card">
-                      <img
-                        src="https://images.unsplash.com/photo-1529429617124-95b109e86b66?w=400&auto=format&fit=crop"
-                        alt="Ventiladores e Filtragem de Ar"
-                      />
-
+                      <img src="https://picsum.photos/200/300" alt="Imagem Aleatória">
                       <span>Ventiladores e Filtragem de Ar</span>
                     </a>
 
                     <a href="products.html" class="product-card">
-                      <img
-                        src="https://images.unsplash.com/photo-1606813902910-3f5de13ef8dd?w=400&auto=format&fit=crop"
-                        alt="Sistemas de reten??o para reboques e ve?culos"
-                      />
-
+                       <img src="https://picsum.photos/200/300" alt="Imagem Aleatória">
                       <span>Sistemas de retenção para reboques e veículos</span>
                     </a>
                   </div>
@@ -241,13 +208,10 @@
               </li>
 
               <li>
-                <a href="success.html" class="nav-link">Histórias de Sucesso</a>
+                <a href="success.html" class="nav-link active">Histórias de Sucesso</a>
               </li>
-
               <li><a href="about.html" class="nav-link">Sobre Nós</a></li>
-
               <li><a href="contact.html" class="nav-link">Contato</a></li>
-
               <li>
                 <a href="contact.html" class="btn-primary"
                   >Solicitar Orçamento</a
@@ -258,86 +222,199 @@
 
           <button class="mobile-menu-btn" id="mobileMenuBtn">
             <span></span>
-
             <span></span>
-
             <span></span>
           </button>
         </div>
       </div>
     </header>
 
+    <main class="success-page">
+      <section class="success-hero">
+        <div class="container">
+          <h1>Histórias de Sucesso</h1>
+          <p>
+            Projetos reais onde nossas soluções reduziram custos, elevaram a
+            segurança e aumentaram a produtividade.
+          </p>
+        </div>
+      </section>
 
-  <main class="success-page">
-    <section class="success-hero">
+      <section class="success-stories">
+        <div class="container">
+          <div class="success-grid">
+            <article class="success-card">
+              <div class="success-image">
+               <img src="https://picsum.photos/200/300" alt="Imagem Aleatória">
+                <span class="success-tag">Eficiência Energética</span>
+              </div>
+              <div class="success-body">
+                <h3>
+                  Descontos de energia para cortinas de ar – Tango International
+                </h3>
+                <p>
+                  As cortinas de ar reduziram a perda de calor e geraram
+                  economia anual estimada de US$ 2.876, com até 95% de desconto
+                  em energia.
+                </p>
+                <a class="btn-primary btn-read-more" href="#">Leia mais</a>
+              </div>
+            </article>
+
+            <article class="success-card">
+              <div class="success-image">
+               <img src="https://picsum.photos/200/300" alt="Imagem Aleatória">
+                <span class="success-tag">Segurança Alimentar</span>
+              </div>
+              <div class="success-body">
+                <h3>
+                  Portas de congeladores – Instalações alimentares de Etobicoke
+                </h3>
+                <p>
+                  Portas defeituosas foram modernizadas com sistemas de vedação
+                  e aquecimento, eliminando gelo, aumentando a segurança e a
+                  eficiência.
+                </p>
+                <a class="btn-primary btn-read-more" href="#">Leia mais</a>
+              </div>
+            </article>
+
+            <article class="success-card">
+              <div class="success-image">
+                <img src="https://picsum.photos/200/300" alt="Imagem Aleatória">
+                <span class="success-tag">Operação 24/7</span>
+              </div>
+              <div class="success-body">
+                <h3>
+                  Remoção de neve com reboque – Instalação alimentar em Ottawa
+                </h3>
+                <p>
+                  Produção retomada em segurança após remoção rápida de neve e
+                  gelo, melhorando proteção de produto e reduzindo paradas.
+                </p>
+                <a class="btn-primary btn-read-more" href="#">Leia mais</a>
+              </div>
+            </article>
+
+            <article class="success-card">
+              <div class="success-image">
+               <img src="https://picsum.photos/200/300" alt="Imagem Aleatória">
+                <span class="success-tag">Automação</span>
+              </div>
+              <div class="success-body">
+                <h3>
+                  Niveladores de doca inteligentes – Centro de distribuição
+                </h3>
+                <p>
+                  Instalação de niveladores hidráulicos e travas de reboque
+                  reduziu acidentes e acelerou o carregamento em 18%.
+                </p>
+                <a class="btn-primary btn-read-more" href="#">Leia mais</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+<!-- Footer -->
+    <footer class="footer">
       <div class="container">
-        <h1>Histórias de Sucesso</h1>
-        <p>Projetos reais onde nossas soluções reduziram custos, elevaram a segurança e aumentaram a produtividade.</p>
-      </div>
-    </section>
+        <div class="footer-grid">
+          <div class="footer-column">
+            <div class="logo">
+            <a href="index.html">
+              <img src="images/logo2.svg" alt="Logo Movmaq" />
+            </a>
+          </div>
 
-    <section class="success-stories">
-      <div class="container">
-        <div class="success-grid">
-          <article class="success-card">
-            <div class="success-image">
-              <img src="https://images.unsplash.com/photo-1582719478248-56e38e21c1b8?w=900&auto=format&fit=crop" alt="Cortina de ar em doca logística">
-              <span class="success-tag">Eficiência Energética</span>
-            </div>
-            <div class="success-body">
-              <h3>Descontos de energia para cortinas de ar – Tango International</h3>
-              <p>As cortinas de ar reduziram a perda de calor e geraram economia anual estimada de US$ 2.876, com até 95% de desconto em energia.</p>
-              <a class="btn-primary btn-read-more" href="#">Leia mais</a>
-            </div>
-          </article>
+            <p>
+              Melhorando Segurança, produtividade e Eficiência energética desde
+              2002.
+            </p>
 
-          <article class="success-card">
-            <div class="success-image">
-              <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=900&auto=format&fit=crop" alt="Porta de congelador industrial">
-              <span class="success-tag">Segurança Alimentar</span>
-            </div>
-            <div class="success-body">
-              <h3>Portas de congeladores – Instalações alimentares de Etobicoke</h3>
-              <p>Portas defeituosas foram modernizadas com sistemas de vedação e aquecimento, eliminando gelo, aumentando a segurança e a eficiência.</p>
-              <a class="btn-primary btn-read-more" href="#">Leia mais</a>
-            </div>
-          </article>
+            <div class="social-links">
+              <a href="#"
+                ><img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg"
+                  alt="Facebook"
+              /></a>
 
-          <article class="success-card">
-            <div class="success-image">
-              <img src="https://images.unsplash.com/photo-1508896694512-1eade558679a?w=900&auto=format&fit=crop" alt="Caminhão em área com neve">
-              <span class="success-tag">Operação 24/7</span>
-            </div>
-            <div class="success-body">
-              <h3>Remoção de neve com reboque – Instalação alimentar em Ottawa</h3>
-              <p>Produção retomada em segurança após remoção rápida de neve e gelo, melhorando proteção de produto e reduzindo paradas.</p>
-              <a class="btn-primary btn-read-more" href="#">Leia mais</a>
-            </div>
-          </article>
+              <a href="#"
+                ><img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/twitter.svg"
+                  alt="Twitter"
+              /></a>
 
-          <article class="success-card">
-            <div class="success-image">
-              <img src="https://images.unsplash.com/photo-1581092152835-30ab079f19b9?w=900&auto=format&fit=crop" alt="Galpão com nível de doca automatizado">
-              <span class="success-tag">Automação</span>
+              <a href="#"
+                ><img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg"
+                  alt="LinkedIn"
+              /></a>
             </div>
-            <div class="success-body">
-              <h3>Niveladores de doca inteligentes – Centro de distribuição</h3>
-              <p>Instalação de niveladores hidráulicos e travas de reboque reduziu acidentes e acelerou o carregamento em 18%.</p>
-              <a class="btn-primary btn-read-more" href="#">Leia mais</a>
-            </div>
-          </article>
+          </div>
+
+          <div class="footer-column">
+            <h3>Links Rápidos</h3>
+
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Serviços</a></li>
+              <li><a href="products.html">Produtos</a></li>
+              <li><a href="about.html">Sobre Nós</a></li>
+              <li><a href="contact.html">Contato</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Nossos Serviços</h3>
+
+            <ul>
+              <li><a href="services.html">Serviço 24/7</a></li>
+              <li><a href="services.html">Manutenção Preventiva</a></li>
+              <li><a href="services.html">Instalações</a></li>
+              <li><a href="services.html">Construção</a></li>
+              <li><a href="services.html">Eficiência Energética</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3>Contato</h3>
+            <ul class="contact-info">
+              <li>
+                <i data-lucide="map-pin" class="footer-icon"></i> Rua Exemplo,
+                123<br /><span class="footer-indent"
+                  >Cidade, Estado - CEP 00000-000</span
+                >
+              </li>
+
+              <li>
+                <i data-lucide="phone" class="footer-icon"></i>
+                <a href="tel:18666011758">1-866-601-1758</a>
+              </li>
+
+              <li>
+                <i data-lucide="mail" class="footer-icon"></i>
+                <a href="mailto:info@exemplo.com">info@exemplo.com</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
 
-  <script>lucide.createIcons();</script>
+      <div class="footer-bottom">
+        <div class="container">
+          <p>
+            &copy; 2026 Movmaq. Todos os direitos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
 
-</body>
 
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
 </html>
-
-
-
-
-
