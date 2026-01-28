@@ -84,8 +84,8 @@ body {
 
 .utility-bar {
   background: #fff;
-  border-bottom: 1px solid #d9d9d9;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .utility-content {
@@ -226,14 +226,14 @@ body {
 .mega-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   background: var(--white);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   min-width: 600px;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-10px);
   transition: all 0.3s;
   margin-top: 10px;
   z-index: 100;
@@ -243,7 +243,6 @@ body {
 .dropdown:hover .mega-menu {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
 }
 
 /* Mega menu de produtos em grade com imagens */
@@ -446,9 +445,8 @@ body {
 }
 
 /* Hero Slider */
-
 .hero {
-  height: 600px;
+  height: 450px;
   position: relative;
 }
 
@@ -482,7 +480,7 @@ body {
   position: relative;
   z-index: 10;
   color: var(--white);
-  padding-top: 150px;
+  padding-top: 70px;
   max-width: 700px;
 }
 
@@ -513,6 +511,7 @@ body {
 .swiper-pagination-bullet {
   background: var(--white) !important;
 }
+
 /* Services Section */
 
 .services-section {
