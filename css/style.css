@@ -7,6 +7,7 @@
 }
 
 :root {
+  /* Paleta central de cores reutilizada em botões, textos e fundos */
   --primary: #003366;
   --secondary: #0066cc;
   --accent: #ff6600;
@@ -21,6 +22,7 @@ html {
 }
 
 body {
+  /* Fonte base e cor padrão aplicadas a todas as páginas */
   font-family: "Inter", "Arial", sans-serif;
   line-height: 1.6;
   color: var(--text);
@@ -167,7 +169,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 12px 0;
 }
 
 .logo {
@@ -186,8 +188,8 @@ body {
 }
 
 .logo img {
-  height: 110px;
-  width: 100px;
+  height: 90px;
+  width: auto;
   display: block;
 }
 
@@ -237,6 +239,7 @@ body {
   z-index: 100;
 }
 
+/* Exibe o mega menu apenas quando o item pai recebe hover */
 .dropdown:hover .mega-menu {
   opacity: 1;
   visibility: visible;
@@ -323,6 +326,7 @@ body {
     color 0.2s ease;
 }
 
+/* Remove a borda direita do último cartão de cada linha (grade 5 colunas) */
 .solution-card:nth-child(5n) {
   border-right: none;
 }
@@ -364,12 +368,14 @@ body {
   letter-spacing: 0.04em;
 }
 
+/* <=1200px: grade de soluções perde uma coluna para evitar aperto */
 @media (max-width: 1200px) {
   .solutions-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
+/* <=900px: mega menu de serviços vira 2 colunas e remove largura mínima */
 @media (max-width: 900px) {
   .solutions-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -377,6 +383,7 @@ body {
   .services-menu {
     min-width: 0;
   }
+  /* Ajusta bordas para o novo número de colunas no mobile */
   .solution-card:nth-child(5n) {
     border-right: 1px solid rgba(0, 0, 0, 0.05);
   }
@@ -868,6 +875,7 @@ body {
   padding: 12px 22px;
 }
 
+/* <=768px: tipografia e espaçamento mais compactos nos cases de sucesso */
 @media (max-width: 768px) {
   .success-hero h1 {
     font-size: 28px;
@@ -1048,6 +1056,7 @@ body {
 
 /* Responsive */
 
+/* <=1024px: navegação vira menu lateral e tipografia reduz para tablets */
 @media (max-width: 1024px) {
   .nav {
     position: fixed;
@@ -1118,6 +1127,7 @@ body {
   }
 }
 
+/* <=768px: grades empilham, botões e textos ficam maiores para toque */
 @media (max-width: 768px) {
   .services-grid {
     grid-template-columns: 1fr;
