@@ -78,12 +78,16 @@
 .services-grid {
   padding: 10px 0 110px;
   background: #ffffff;
+  /* Override global .services-grid (used in other pages) so the section
+     doesn't become a 4-column grid that squeezes the container */
+  display: block;
 }
 
 .service-card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 26px;
+  align-items: stretch;
 }
 
 .service-card {
