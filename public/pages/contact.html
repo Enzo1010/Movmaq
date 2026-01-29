@@ -1,0 +1,324 @@
+<!doctype html>
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato - Movmaq</title>
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/contact.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js"></script>
+  </head>
+
+  <body>
+    <div id="header"></div>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="page-hero-overlay"></div>
+
+      <div class="container">
+        <div class="page-hero-content" data-aos="fade-up">
+          <h1>Entre em Contato</h1>
+
+          <p>Estamos aqui para ajudar. Fale conosco hoje mesmo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+
+    <section class="contact-section">
+      <div class="container">
+        <!-- Contact Info Cards -->
+
+        <div class="contact-cards">
+          <div class="contact-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="contact-icon"><i data-lucide="phone"></i></div>
+
+            <h3>Telefone</h3>
+
+            <p>Ligue para ns</p>
+
+            <a href="tel:18666011758" class="contact-link">1-866-601-1758</a>
+          </div>
+
+          <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="contact-icon"><i data-lucide="mail"></i></div>
+
+            <h3>E-mail</h3>
+
+            <p>Resposta em at 24 horas teis</p>
+
+            <a href="mailto:info@exemplo.com" class="contact-link"
+              >info@exemplo.com</a
+            >
+          </div>
+
+          <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+
+            <h3>Endereço</h3>
+
+            <p>Visite nosso escritrio</p>
+
+            <span class="contact-link">Rua Exemplo, 123</span>
+          </div>
+
+          <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="contact-icon"><i data-lucide="clock"></i></div>
+
+            <h3>Horário</h3>
+
+            <p>Segunda a Sexta</p>
+
+            <span class="contact-link">8:00 - 18:00</span>
+          </div>
+        </div>
+
+        <!-- Main Contact Content -->
+
+        <div class="contact-content">
+          <!-- Contact Form -->
+
+          <div class="contact-form-wrapper" data-aos="fade-right">
+            <h2>Envie sua Mensagem</h2>
+
+            <p class="form-subtitle">
+              Preencha o formulrio abaixo e entraremos em contato em breve.
+            </p>
+
+            <form id="contactForm" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Nome Completo *</label>
+
+                  <input type="text" id="name" name="name" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="company">Empresa</label>
+
+                  <input type="text" id="company" name="company" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">E-mail *</label>
+
+                  <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Telefone *</label>
+
+                  <input type="tel" id="phone" name="phone" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="service">Tipo de Serviço</label>
+
+                <select id="service" name="service">
+                  <option value="">Selecione um servio</option>
+
+                  <option value="emergency">Serviço de Emergência</option>
+
+                  <option value="maintenance">Manutenção Preventiva</option>
+
+                  <option value="installation">Instalao de Equipamentos</option>
+
+                  <option value="construction">
+                    Construção / Novos Projetos
+                  </option>
+
+                  <option value="quote">Solicitar Orçamento</option>
+
+                  <option value="other">Outro</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Assunto *</label>
+
+                <input type="text" id="subject" name="subject" required />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Mensagem *</label>
+
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" name="newsletter" />
+
+                  <span>Desejo receber novidades e ofertas por e-mail</span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn-primary btn-submit">
+                Enviar Mensagem
+              </button>
+            </form>
+          </div>
+
+          <!-- Office Location -->
+
+          <div class="office-locations" data-aos="fade-left">
+            <h2>Nossa Localizao</h2>
+
+            <p class="locations-subtitle">
+              Visite nosso escritrio ou entre em contato
+            </p>
+
+            <div class="location-main">
+              <div class="location-icon"><i data-lucide="map-pin"></i></div>
+
+              <div class="location-details">
+                <h3>Escritrio Principal</h3>
+
+                <p class="location-address">
+                  Rua Exemplo, 123<br />
+
+                  Bairro - Cidade, Estado<br />
+
+                  CEP 00000-000
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="method-icon"><i data-lucide="phone"></i></div>
+
+                <div class="method-info">
+                  <h4>Telefone</h4>
+
+                  <a href="tel:18666011758">1-866-601-1758</a>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon"><i data-lucide="mail"></i></div>
+
+                <div class="method-info">
+                  <h4>E-mail</h4>
+
+                  <a href="mailto:info@exemplo.com">info@exemplo.com</a>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="method-icon">
+                  <i data-lucide="message-circle"></i>
+                </div>
+
+                <div class="method-info">
+                  <h4>WhatsApp</h4>
+
+                  <a href="https://wa.me/5500000000000" target="_blank"
+                    >(00) 00000-0000</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="business-hours">
+              <h4>Horário de Atendimento</h4>
+
+              <div class="hours-list">
+                <div class="hours-item">
+                  <span>Segunda a Sexta</span>
+
+                  <span>8:00 - 18:00</span>
+                </div>
+
+                <div class="hours-item">
+                  <span>Sbado</span>
+
+                  <span>8:00 - 12:00</span>
+                </div>
+
+                <div class="hours-item">
+                  <span>Domingo</span>
+
+                  <span>Fechado</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+
+    <section class="faq-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Perguntas Frequentes</h2>
+
+          <p>Encontre respostas rpidas para as dúvidas mais comuns</p>
+        </div>
+
+        <div class="faq-grid">
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="0">
+            <h3>Qual o tempo de resposta para contato</h3>
+
+            <p>
+              Respondemos todos os contatos em at 24 horas teis. Para
+              emergncias, ligue diretamente para nosso telefone.
+            </p>
+          </div>
+
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+            <h3>Vocs oferecem Orçamento gratuito</h3>
+
+            <p>
+              Sim! Oferecemos Orçamentos gratuitos e sem compromisso. Basta
+              preencher o formulrio ou entrar em contato.
+            </p>
+          </div>
+
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+            <h3>Posso agendar uma visita tcnica</h3>
+
+            <p>
+              Claro! Entre em contato conosco e agende uma visita tcnica
+              gratuita para avaliao do seu projeto.
+            </p>
+          </div>
+
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+            <h3>Atendem em outras regiões</h3>
+
+            <p>
+              Sim! Atendemos diversas regiões. Entre em contato para verificar a
+              disponibilidade na sua localidade.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="../../js/script.js"></script>
+    <script src="../../js/components.js"></script>
+    <script>
+      // Inicializar cones Lucide
+
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
