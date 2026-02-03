@@ -1,4 +1,4 @@
-// AOS (animation) - init if available
+﻿// AOS (animation) - init if available
 if (typeof AOS !== 'undefined') {
   AOS.init({ duration: 1000, once: true, offset: 100 });
 }
@@ -15,20 +15,64 @@ if (document.querySelector('.heroSwiper') && typeof Swiper !== 'undefined') {
   });
 }
 
-// Mobile menu
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-const nav = document.getElementById('nav');
+function initHeaderUI() {
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const nav = document.getElementById('nav');
 
-if (mobileMenuBtn && nav) {
-  mobileMenuBtn.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    mobileMenuBtn.classList.toggle('active');
-  });
+  if (mobileMenuBtn && nav && !mobileMenuBtn.dataset.binded) {
+    mobileMenuBtn.dataset.binded = 'true';
 
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('active');
-      mobileMenuBtn.classList.remove('active');
+    mobileMenuBtn.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      mobileMenuBtn.classList.toggle('active');
+    });
+
+    nav.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        mobileMenuBtn.classList.remove('active');
+      });
+    });
+  }
+
+  const header = document.querySelector('.header');
+
+  if (header && !header.dataset.shadowBound) {
+    header.dataset.shadowBound = 'true';
+    const toggleShadow = () => {
+      const scrolled = window.pageYOffset;
+      header.style.boxShadow =
+        scrolled > 100
+          ? '0 5px 20px rgba(0,0,0,0.15)'
+          : '0 2px 10px rgba(0,0,0,0.1)';
+    };
+
+    toggleShadow();
+    window.addEventListener('scroll', toggleShadow);
+  }
+
+  const topBanner = document.querySelector('.top-banner');
+  const bannerCloseBtn = document.querySelector('.banner-close');
+
+  if (topBanner && bannerCloseBtn && !bannerCloseBtn.dataset.binded) {
+    bannerCloseBtn.dataset.binded = 'true';
+    bannerCloseBtn.addEventListener('click', () => {
+      topBanner.style.display = 'none';
+    });
+  }
+
+  document.querySelectorAll('.dropdown').forEach(dropdown => {
+    if (dropdown.dataset.binded) return;
+    dropdown.dataset.binded = 'true';
+
+    const link = dropdown.querySelector('.nav-link');
+    const megaMenu = dropdown.querySelector('.mega-menu');
+    if (!link || !megaMenu) return;
+
+    link.addEventListener('click', event => {
+      if (!window.matchMedia('(max-width: 1024px)').matches) return;
+      event.preventDefault();
+      megaMenu.style.display = megaMenu.style.display === 'block' ? 'none' : 'block';
     });
   });
 }
@@ -44,39 +88,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Header shadow on scroll
-const header = document.querySelector('.header');
-
-if (header) {
-  window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    header.style.boxShadow =
-      scrolled > 100 ? '0 5px 20px rgba(0,0,0,0.15)' : '0 2px 10px rgba(0,0,0,0.1)';
-  });
-}
-
-// Top banner close
-const topBanner = document.querySelector('.top-banner');
-const bannerCloseBtn = document.querySelector('.banner-close');
-
-if (bannerCloseBtn && topBanner) {
-  bannerCloseBtn.addEventListener('click', () => {
-    topBanner.style.display = 'none';
-  });
-}
-
-// Dropdown menu for mobile
-document.querySelectorAll('.dropdown').forEach(dropdown => {
-  const link = dropdown.querySelector('.nav-link');
-  const megaMenu = dropdown.querySelector('.mega-menu');
-  if (!link || !megaMenu) return;
-
-  link.addEventListener('click', event => {
-    if (!window.matchMedia('(max-width: 1024px)').matches) return;
-    event.preventDefault();
-    megaMenu.style.display = megaMenu.style.display === 'block' ? 'none' : 'block';
-  });
-});
 
 // Reset mega-menu inline state on desktop
 window.addEventListener('resize', () => {
@@ -262,3 +273,4 @@ if ('IntersectionObserver' in window) {
 
   document.querySelectorAll('img[data-src]').forEach(img => imageObserver.observe(img));
 }
+

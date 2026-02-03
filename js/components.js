@@ -1,4 +1,4 @@
-async function loadComponent(id, file, afterLoad) {
+﻿async function loadComponent(id, file, afterLoad) {
   try {
     const response = await fetch(file);
     if (!response.ok) throw new Error(`Erro ao carregar ${file}`);
@@ -34,7 +34,10 @@ function setActiveMenu() {
 }
 
 // carregando header e footer + marca menu ativo depois do header
-loadComponent("header", "../../public/components/header.html", setActiveMenu);
+loadComponent("header", "../../public/components/header.html", () => {
+  setActiveMenu();
+  if (typeof initHeaderUI === "function") initHeaderUI();
+});
 loadComponent("footer", "../../public/components/footer.html");
 
 // menu mobile
@@ -43,3 +46,4 @@ document.addEventListener("click", (e) => {
     document.getElementById("nav")?.classList.toggle("active");
   }
 });
+
