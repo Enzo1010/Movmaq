@@ -1,54 +1,5 @@
 ﻿/* Services Page Styles */
 
-/* Page Hero */
-
-.page-hero {
-  height: 400px;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.page-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920")
-    center/cover;
-  opacity: 0.15;
-}
-
-.page-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0, 51, 102, 0.95),
-    rgba(0, 102, 204, 0.85)
-  );
-}
-
-.page-hero-content {
-  position: relative;
-  z-index: 10;
-  text-align: center;
-  color: var(--white);
-}
-
-.page-hero-content h1 {
-  font-size: 64px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.page-hero-content p {
-  font-size: 24px;
-  opacity: 0.95;
-}
-
 /* Services Grid Cards */
 
 .services-hero {
@@ -78,9 +29,6 @@
 .services-grid {
   padding: 10px 0 110px;
   background: #ffffff;
-  /* Override global .services-grid (used in other pages) so the section
-     doesn't become a 4-column grid that squeezes the container */
-  display: block;
 }
 
 .service-card-grid {
@@ -198,9 +146,6 @@
 /* Responsive */
 
 @media (max-width: 1024px) {
-  .page-hero-content h1 {
-    font-size: 48px;
-  }
   .services-hero {
     padding: 70px 0 24px;
   }
@@ -219,15 +164,6 @@
 }
 
 @media (max-width: 768px) {
-  .page-hero {
-    height: 300px;
-  }
-  .page-hero-content h1 {
-    font-size: 36px;
-  }
-  .page-hero-content p {
-    font-size: 18px;
-  }
   .services-hero h1 {
     font-size: 28px;
   }
@@ -247,12 +183,6 @@
 }
 
 @media (max-width: 480px) {
-  .page-hero-content h1 {
-    font-size: 28px;
-  }
-  .page-hero-content p {
-    font-size: 16px;
-  }
   .services-hero h1 {
     font-size: 24px;
   }

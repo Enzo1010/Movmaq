@@ -117,6 +117,17 @@
 .mvv-icon {
   font-size: 64px;
   margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.mvv-icon svg {
+  width: 64px;
+  height: 64px;
+  stroke: var(--accent);
+  stroke-width: 2;
 }
 
 .mvv-card h3 {
@@ -521,6 +532,11 @@
 
   .mvv-icon {
     font-size: 48px;
+  }
+
+  .mvv-icon svg {
+    width: 48px;
+    height: 48px;
   }
 
   .mvv-card h3 {

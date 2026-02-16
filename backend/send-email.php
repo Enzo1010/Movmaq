@@ -2,15 +2,14 @@
 
 declare(strict_types=1);
 
-// Configuração
+// Configuracao
 $destinatario = 'teleg1507@gmail.com';
 $nomeSite = 'Northern Dock Systems';
 
-// Headers de segurança
+// Headers de seguranca
 header('Content-Type: application/json; charset=utf-8');
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: POST');
-header('Access-Control-Allow-Headers: Content-Type');
+header('X-Content-Type-Options: nosniff');
+header('Referrer-Policy: strict-origin-when-cross-origin');
 
 function jsonResponse(int $statusCode, array $payload): void
 {
@@ -24,11 +23,96 @@ function limparInput(?string $data): string
     return htmlspecialchars(trim((string) $data), ENT_QUOTES, 'UTF-8');
 }
 
-// Verificar método HTTP
+function allowedOrigin(?string $origin): ?string
+{
+    if ($origin === null || $origin === '') {
+        return null;
+    }
+
+    $originHost = parse_url($origin, PHP_URL_HOST);
+    $requestHost = $_SERVER['HTTP_HOST'] ?? '';
+
+    if (!$originHost || $requestHost === '') {
+        return null;
+    }
+
+    return strcasecmp($originHost, $requestHost) === 0 ? $origin : null;
+}
+
+function isRateLimited(string $clientKey, int $maxRequests = 5, int $windowSeconds = 300): bool
+{
+    $dir = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'movmaq-rate-limit';
+
+    if (!is_dir($dir) && !@mkdir($dir, 0700, true) && !is_dir($dir)) {
+        return false;
+    }
+
+    $file = $dir . DIRECTORY_SEPARATOR . hash('sha256', $clientKey) . '.log';
+    $now = time();
+    $validTimestamps = [];
+
+    if (is_file($file)) {
+        $savedRows = @file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) ?: [];
+        foreach ($savedRows as $row) {
+            $timestamp = (int) $row;
+            if ($timestamp >= ($now - $windowSeconds)) {
+                $validTimestamps[] = $timestamp;
+            }
+        }
+    }
+
+    if (count($validTimestamps) >= $maxRequests) {
+        @file_put_contents($file, implode(PHP_EOL, $validTimestamps) . PHP_EOL, LOCK_EX);
+        return true;
+    }
+
+    $validTimestamps[] = $now;
+    @file_put_contents($file, implode(PHP_EOL, $validTimestamps) . PHP_EOL, LOCK_EX);
+
+    return false;
+}
+
+$origin = allowedOrigin($_SERVER['HTTP_ORIGIN'] ?? null);
+if ($origin !== null) {
+    header('Access-Control-Allow-Origin: ' . $origin);
+    header('Vary: Origin');
+}
+
+// Verificar metodo HTTP
 if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
     jsonResponse(405, [
         'success' => false,
-        'message' => 'Método não permitido. Use POST.',
+        'message' => 'Metodo nao permitido. Use POST.',
+    ]);
+}
+
+$clientIp = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+$userAgent = substr((string) ($_SERVER['HTTP_USER_AGENT'] ?? ''), 0, 160);
+$clientKey = $clientIp . '|' . $userAgent;
+
+if (isRateLimited($clientKey)) {
+    jsonResponse(429, [
+        'success' => false,
+        'message' => 'Muitas tentativas. Aguarde alguns minutos e tente novamente.',
+    ]);
+}
+
+// Honeypot (bots costumam preencher esse campo invisivel)
+$honeypot = limparInput($_POST['website'] ?? '');
+if ($honeypot !== '') {
+    error_log('Formulario bloqueado por honeypot: ' . $clientIp);
+    jsonResponse(200, [
+        'success' => true,
+        'message' => 'Mensagem recebida.',
+    ]);
+}
+
+// Tempo minimo de preenchimento (impede submit instantaneo de bot)
+$formStartedAt = (int) ($_POST['form_started_at'] ?? 0);
+if ($formStartedAt > 0 && (time() - $formStartedAt) < 3) {
+    jsonResponse(400, [
+        'success' => false,
+        'message' => 'Formulario enviado muito rapido. Tente novamente.',
     ]);
 }
 
@@ -41,29 +125,29 @@ $service = limparInput($_POST['service'] ?? '');
 $subject = limparInput($_POST['subject'] ?? '');
 $message = limparInput($_POST['message'] ?? '');
 
-// Validações
+// Validacoes
 $errors = [];
 
 if ($name === '') {
-    $errors[] = 'Nome é obrigatório.';
+    $errors[] = 'Nome e obrigatorio.';
 }
 
 if ($email === '') {
-    $errors[] = 'E-mail é obrigatório.';
+    $errors[] = 'E-mail e obrigatorio.';
 } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $errors[] = 'E-mail inválido.';
+    $errors[] = 'E-mail invalido.';
 }
 
 if ($phone === '') {
-    $errors[] = 'Telefone é obrigatório.';
+    $errors[] = 'Telefone e obrigatorio.';
 }
 
 if ($subject === '') {
-    $errors[] = 'Assunto é obrigatório.';
+    $errors[] = 'Assunto e obrigatorio.';
 }
 
 if ($message === '') {
-    $errors[] = 'Mensagem é obrigatória.';
+    $errors[] = 'Mensagem e obrigatoria.';
 }
 
 if ($errors !== []) {
@@ -73,18 +157,18 @@ if ($errors !== []) {
     ]);
 }
 
-// Tradução do tipo de serviço
+// Traducao do tipo de servico
 $serviceLabels = [
-    'emergency' => 'Serviço de Emergência',
-    'maintenance' => 'Manutenção Preventiva',
-    'installation' => 'Instalação de Equipamentos',
-    'construction' => 'Construção / Novos Projetos',
-    'quote' => 'Solicitar Orçamento',
+    'emergency' => 'Servico de Emergencia',
+    'maintenance' => 'Manutencao Preventiva',
+    'installation' => 'Instalacao de Equipamentos',
+    'construction' => 'Construcao / Novos Projetos',
+    'quote' => 'Solicitar Orcamento',
     'other' => 'Outro',
 ];
 
-$serviceText = $serviceLabels[$service] ?? 'Não especificado';
-$companyText = $company !== '' ? $company : 'Não informado';
+$serviceText = $serviceLabels[$service] ?? 'Nao especificado';
+$companyText = $company !== '' ? $company : 'Nao informado';
 $messageWithBreaks = nl2br($message);
 $submittedAt = date('d/m/Y H:i:s');
 
@@ -178,7 +262,7 @@ $emailBody = <<<HTML
                 <span class="value">{$phone}</span>
             </div>
             <div class="field">
-                <span class="label">Tipo de Serviço:</span>
+                <span class="label">Tipo de Servico:</span>
                 <span class="value">{$serviceText}</span>
             </div>
             <div class="field">
@@ -191,7 +275,7 @@ $emailBody = <<<HTML
             </div>
         </div>
         <div class="footer">
-            <p>Este e-mail foi enviado através do formulário de contato do site {$nomeSite}</p>
+            <p>Este e-mail foi enviado pelo formulario de contato do site {$nomeSite}</p>
             <p>Data/Hora: {$submittedAt}</p>
         </div>
     </div>

@@ -28,8 +28,33 @@
 }
 
 .contact-icon {
-  font-size: 48px;
-  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: var(--light-gray);
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.contact-icon svg,
+.location-icon svg,
+.method-icon svg {
+  width: 48px;
+  height: 48px;
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+
+.contact-card:hover .contact-icon {
+  background: var(--accent);
+  transform: scale(1.1);
+}
+
+.contact-card:hover .contact-icon svg {
+  stroke: var(--white);
 }
 
 .contact-card h3 {
@@ -129,23 +154,6 @@
   min-height: 120px;
 }
 
-.checkbox-group {
-  margin-bottom: 30px;
-}
-
-.checkbox-label {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: normal;
-  cursor: pointer;
-}
-
-.checkbox-label input[type="checkbox"] {
-  width: auto;
-  cursor: pointer;
-}
-
 .btn-submit {
   width: 100%;
   padding: 15px;
@@ -178,8 +186,18 @@
 }
 
 .location-icon {
-  font-size: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: var(--accent);
+  border-radius: 50%;
   flex-shrink: 0;
+}
+
+.location-icon svg {
+  stroke: var(--white) !important;
 }
 
 .location-details h3 {
@@ -217,8 +235,23 @@
 }
 
 .method-icon {
-  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: var(--light-gray);
+  border-radius: 50%;
   flex-shrink: 0;
+  transition: all 0.3s;
+}
+
+.contact-method:hover .method-icon {
+  background: var(--accent);
+}
+
+.contact-method:hover .method-icon svg {
+  stroke: var(--white);
 }
 
 .method-info h4 {
@@ -354,15 +387,33 @@
   .contact-form-wrapper h2 {
     font-size: 28px;
   }
+
+  .contact-icon svg,
+  .location-icon svg,
+  .method-icon svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .contact-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .location-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .method-icon {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media (max-width: 480px) {
   .contact-card {
     padding: 30px 20px;
-  }
-
-  .contact-icon {
-    font-size: 36px;
   }
 
   .contact-form-wrapper h2 {

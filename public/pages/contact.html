@@ -38,9 +38,11 @@
 
             <h3>Telefone</h3>
 
-            <p>Ligue para ns</p>
+            <p>Ligue para nós</p>
 
-            <a href="tel:18666011758" class="contact-link">1-866-601-1758</a>
+            <a href="tel:18666011758" class="contact-link" data-contact-phone
+              >1-866-601-1758</a
+            >
           </div>
 
           <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
@@ -48,10 +50,14 @@
 
             <h3>E-mail</h3>
 
-            <p>Resposta em at 24 horas teis</p>
+            <p>Resposta em até 24 horas úteis</p>
 
-            <a href="mailto:info@exemplo.com" class="contact-link"
-              >info@exemplo.com</a
+            <a
+              href="mailto:info@exemplo.com"
+              class="contact-link"
+              data-contact-email
+            >
+              info@exemplo.com</a
             >
           </div>
 
@@ -60,9 +66,11 @@
 
             <h3>Endereço</h3>
 
-            <p>Visite nosso escritrio</p>
+            <p>Visite nosso escritório</p>
 
-            <span class="contact-link">Rua Exemplo, 123</span>
+            <span class="contact-link" data-contact-address-line1
+              >Rua Exemplo, 123</span
+            >
           </div>
 
           <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
@@ -85,10 +93,20 @@
             <h2>Envie sua Mensagem</h2>
 
             <p class="form-subtitle">
-              Preencha o formulrio abaixo e entraremos em contato em breve.
+              Preencha o formulário abaixo e entraremos em contato em breve.
             </p>
 
             <form id="contactForm" class="contact-form">
+              <input
+                type="text"
+                name="website"
+                tabindex="-1"
+                autocomplete="off"
+                aria-hidden="true"
+                style="position: absolute; left: -9999px; opacity: 0"
+              />
+              <input type="hidden" name="form_started_at" id="form_started_at" />
+
               <div class="form-row">
                 <div class="form-group">
                   <label for="name">Nome Completo *</label>
@@ -121,13 +139,13 @@
                 <label for="service">Tipo de Serviço</label>
 
                 <select id="service" name="service">
-                  <option value="">Selecione um servio</option>
+                  <option value="">Selecione um serviço</option>
 
                   <option value="emergency">Serviço de Emergência</option>
 
                   <option value="maintenance">Manutenção Preventiva</option>
 
-                  <option value="installation">Instalao de Equipamentos</option>
+                  <option value="installation">Instalação de Equipamentos</option>
 
                   <option value="construction">
                     Construção / Novos Projetos
@@ -156,14 +174,6 @@
                 ></textarea>
               </div>
 
-              <div class="form-group checkbox-group">
-                <label class="checkbox-label">
-                  <input type="checkbox" name="newsletter" />
-
-                  <span>Desejo receber novidades e ofertas por e-mail</span>
-                </label>
-              </div>
-
               <button type="submit" class="btn-primary btn-submit">
                 Enviar Mensagem
               </button>
@@ -173,24 +183,23 @@
           <!-- Office Location -->
 
           <div class="office-locations" data-aos="fade-left">
-            <h2>Nossa Localizao</h2>
+            <h2>Nossa Localização</h2>
 
             <p class="locations-subtitle">
-              Visite nosso escritrio ou entre em contato
+              Visite nosso escritório ou entre em contato
             </p>
 
             <div class="location-main">
               <div class="location-icon"><i data-lucide="map-pin"></i></div>
 
               <div class="location-details">
-                <h3>Escritrio Principal</h3>
+                <h3>Escritório Principal</h3>
 
                 <p class="location-address">
-                  Rua Exemplo, 123<br />
-
-                  Bairro - Cidade, Estado<br />
-
-                  CEP 00000-000
+                  <span data-contact-address-line1>Rua Exemplo, 123</span><br />
+                  <span data-contact-address-line2
+                    >Cidade, Estado - CEP 00000-000</span
+                  >
                 </p>
               </div>
             </div>
@@ -202,7 +211,7 @@
                 <div class="method-info">
                   <h4>Telefone</h4>
 
-                  <a href="tel:18666011758">1-866-601-1758</a>
+                  <a href="tel:18666011758" data-contact-phone>1-866-601-1758</a>
                 </div>
               </div>
 
@@ -212,7 +221,9 @@
                 <div class="method-info">
                   <h4>E-mail</h4>
 
-                  <a href="mailto:info@exemplo.com">info@exemplo.com</a>
+                  <a href="mailto:info@exemplo.com" data-contact-email
+                    >info@exemplo.com</a
+                  >
                 </div>
               </div>
 
@@ -224,8 +235,13 @@
                 <div class="method-info">
                   <h4>WhatsApp</h4>
 
-                  <a href="https://wa.me/5500000000000" target="_blank"
-                    >(00) 00000-0000</a
+                  <a
+                    href="https://wa.me/5500000000000"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-contact-whatsapp
+                  >
+                    (00) 00000-0000</a
                   >
                 </div>
               </div>
@@ -242,7 +258,7 @@
                 </div>
 
                 <div class="hours-item">
-                  <span>Sbado</span>
+                  <span>Sábado</span>
 
                   <span>8:00 - 12:00</span>
                 </div>
@@ -266,7 +282,7 @@
         <div class="section-header" data-aos="fade-up">
           <h2>Perguntas Frequentes</h2>
 
-          <p>Encontre respostas rpidas para as dúvidas mais comuns</p>
+          <p>Encontre respostas rápidas para as dúvidas mais comuns</p>
         </div>
 
         <div class="faq-grid">
@@ -274,26 +290,26 @@
             <h3>Qual o tempo de resposta para contato</h3>
 
             <p>
-              Respondemos todos os contatos em at 24 horas teis. Para
-              emergncias, ligue diretamente para nosso telefone.
+              Respondemos todos os contatos em até 24 horas úteis. Para
+              emergências, ligue diretamente para nosso telefone.
             </p>
           </div>
 
           <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
-            <h3>Vocs oferecem Orçamento gratuito</h3>
+            <h3>Vocês oferecem Orçamento gratuito</h3>
 
             <p>
               Sim! Oferecemos Orçamentos gratuitos e sem compromisso. Basta
-              preencher o formulrio ou entrar em contato.
+              preencher o formulário ou entrar em contato.
             </p>
           </div>
 
           <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-            <h3>Posso agendar uma visita tcnica</h3>
+            <h3>Posso agendar uma visita técnica</h3>
 
             <p>
-              Claro! Entre em contato conosco e agende uma visita tcnica
-              gratuita para avaliao do seu projeto.
+              Claro! Entre em contato conosco e agende uma visita técnica
+              gratuita para avaliação do seu projeto.
             </p>
           </div>
 
@@ -316,7 +332,7 @@
     <script src="../../js/script.js"></script>
     <script src="../../js/components.js"></script>
     <script>
-      // Inicializar cones Lucide
+      // Inicializar ícones Lucide
 
       lucide.createIcons();
     </script>

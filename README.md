@@ -1,64 +1,61 @@
 # Movmaq
 
-Este projeto é um desenvolvimento freelance para um cliente no setor de soluções industriais (portas, docas de carga, manutenção, etc.). O design e estrutura são inspirados no site [Northern Dock Systems](https://www.northerndocksystems.com/).
+Projeto institucional para o setor de solucoes industriais (portas, docas de carga, manutencao e equipamentos).
 
-> **Nota**: O projeto encontra-se em estágio de desenvolvimento e aguarda o envio dos dados reais (textos e imagens) por parte do cliente. Atualmente, utiliza placeholders e estruturas baseadas na referência.
+## Tecnologias
 
-## 🛠 Tecnologias Utilizadas
+- HTML5
+- CSS3
+- JavaScript (vanilla)
+- PHP (endpoint de formulario)
+- Bibliotecas: Swiper, AOS e Lucide Icons
 
-O projeto foi construído utilizando tecnologias web padrão, sem dependência de frameworks complexos, garantindo leveza e facilidade de manutenção.
+## Estrutura
 
-- **HTML5**: Semântico e estruturado.
-- **CSS3**: Estilização customizada (`assets/css/style.css`).
-- **JavaScript**: Lógica de interação e componentes (`js/script.js`, `js/components.js`).
-- **Bibliotecas Externas**:
-  - [Swiper.js](https://swiperjs.com/): Para os carrosséis/sliders (Hero section).
-  - [AOS (Animate On Scroll)](https://michalsnik.github.io/aos/): Para animações de entrada dos elementos.
-  - [Lucide Icons](https://lucide.dev/): Para ícones vetoriais leves.
-
-## 📂 Estrutura do Projeto
-
-```
+```text
 Movmaq/
-├── .vscode/              # Configurações do editor
-├── assets/
-│   ├── css/              # Folhas de estilo (style.css)
-│   └── images/           # Imagens e ícones
-├── backend/
-│   └── send-email.php    # Script PHP para envio de formulários
-├── js/
-│   ├── components.js     # Lógica para carregar header/footer
-│   └── script.js         # Scripts gerais da aplicação
-├── public/
-│   ├── components/       # Componentes HTML reutilizáveis
-│   │   ├── footer.html
-│   │   └── header.html
-│   └── pages/            # Páginas do site
-│       ├── about.html
-│       ├── contact.html
-│       ├── index.html
-│       ├── products.html
-│       ├── services.html
-│       └── success.html
-├── .gitattributes
-├── .gitignore
-└── README.md
+|-- assets/
+|   |-- css/
+|   `-- images/
+|-- backend/
+|   `-- send-email.php
+|-- js/
+|   |-- components.js
+|   `-- script.js
+|-- public/
+|   |-- components/
+|   `-- pages/
+|-- .gitignore
+`-- README.md
 ```
 
-## 🚀 Como Executar
+## Como rodar localmente
 
-Como é um projeto estático, não há necessidade de instalação de dependências ou build tools complexos.
+Recomendado usar servidor local para evitar erro de `fetch` no formulario.
 
-1. Navegue até a pasta `public/pages/`.
-2. Abra o arquivo `index.html` em seu navegador de preferência.
+1. Abra o terminal na raiz do projeto.
+2. Inicie um servidor PHP:
 
-## 🚧 Status do Projeto
+```bash
+php -S localhost:8000
+```
 
-- [x] Estrutura inicial do HTML
-- [x] Integração com Swiper e AOS
-- [ ] Conteúdo final do cliente (Textos e Imagens)
-- [ ] Ajustes finos de responsividade
-- [ ] Implementação de formulários de contato
+3. Abra no navegador:
 
----
-*Desenvolvido como projeto freelance.*
+```text
+http://localhost:8000/public/pages/index.html
+```
+
+## Formulario de contato
+
+- Frontend: `public/pages/contact.html`
+- Script JS: `js/script.js`
+- Backend: `backend/send-email.php`
+
+## Status
+
+- [x] Estrutura base de paginas
+- [x] Integracao com Swiper e AOS
+- [x] Formulario com validacao no backend
+- [ ] Conteudo final do cliente (textos e imagens)
+- [ ] Ajustes finais de responsividade e SEO

@@ -1,7 +1,64 @@
-﻿// AOS (animation) - init if available
+// AOS (animation) - init if available
 if (typeof AOS !== 'undefined') {
   AOS.init({ duration: 1000, once: true, offset: 100 });
 }
+
+const CONTACT_DATA = Object.freeze({
+  phoneRaw: '18666011758',
+  phoneDisplay: '1-866-601-1758',
+  email: 'info@exemplo.com',
+  whatsappRaw: '5500000000000',
+  whatsappDisplay: '(00) 00000-0000',
+  addressLine1: 'Rua Exemplo, 123',
+  addressLine2: 'Cidade, Estado - CEP 00000-000'
+});
+
+function applyContactData(root = document) {
+  if (!root) return;
+
+  root.querySelectorAll('[data-contact-phone]').forEach(element => {
+    if (element.tagName === 'A') {
+      element.setAttribute('href', `tel:${CONTACT_DATA.phoneRaw}`);
+    }
+    const label = element.getAttribute('data-contact-phone-label');
+    element.textContent = label
+      ? `${label} ${CONTACT_DATA.phoneDisplay}`
+      : CONTACT_DATA.phoneDisplay;
+  });
+
+  root.querySelectorAll('[data-contact-email]').forEach(element => {
+    if (element.tagName === 'A') {
+      element.setAttribute('href', `mailto:${CONTACT_DATA.email}`);
+    }
+    element.textContent = CONTACT_DATA.email;
+  });
+
+  root.querySelectorAll('[data-contact-whatsapp]').forEach(element => {
+    if (element.tagName === 'A') {
+      element.setAttribute('href', `https://wa.me/${CONTACT_DATA.whatsappRaw}`);
+      element.setAttribute('target', '_blank');
+      element.setAttribute('rel', 'noopener noreferrer');
+    }
+
+    if (!element.hasAttribute('data-contact-whatsapp-no-text')) {
+      const label = element.getAttribute('data-contact-whatsapp-label');
+      element.textContent = label
+        ? `${label} ${CONTACT_DATA.whatsappDisplay}`
+        : CONTACT_DATA.whatsappDisplay;
+    }
+  });
+
+  root.querySelectorAll('[data-contact-address-line1]').forEach(element => {
+    element.textContent = CONTACT_DATA.addressLine1;
+  });
+
+  root.querySelectorAll('[data-contact-address-line2]').forEach(element => {
+    element.textContent = CONTACT_DATA.addressLine2;
+  });
+}
+
+window.applyContactData = applyContactData;
+applyContactData(document);
 
 // Hero Swiper - init if available
 if (document.querySelector('.heroSwiper') && typeof Swiper !== 'undefined') {
@@ -88,7 +145,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-
 // Reset mega-menu inline state on desktop
 window.addEventListener('resize', () => {
   if (window.matchMedia('(min-width: 1025px)').matches) {
@@ -100,8 +156,14 @@ window.addEventListener('resize', () => {
 
 // Contact form
 const contactForm = document.getElementById('contactForm');
+const SEND_EMAIL_ENDPOINT = '../../backend/send-email.php';
 
 if (contactForm) {
+  const startedAtInput = contactForm.querySelector('#form_started_at');
+  if (startedAtInput) {
+    startedAtInput.value = String(Math.floor(Date.now() / 1000));
+  }
+
   contactForm.addEventListener('submit', async event => {
     event.preventDefault();
 
@@ -115,19 +177,30 @@ if (contactForm) {
 
     const formData = new FormData(contactForm);
 
+    if (startedAtInput && !startedAtInput.value) {
+      startedAtInput.value = String(Math.floor(Date.now() / 1000));
+      formData.set('form_started_at', startedAtInput.value);
+    }
+
     try {
-      const response = await fetch('send-email.php', { method: 'POST', body: formData });
+      const response = await fetch(SEND_EMAIL_ENDPOINT, { method: 'POST', body: formData });
       const result = await response.json();
 
       if (result.success) {
         showSuccessMessage(formData.get('name') || '');
         contactForm.reset();
+
+        if (startedAtInput) {
+          startedAtInput.value = String(Math.floor(Date.now() / 1000));
+        }
       } else {
         showErrorMessage(result.message || 'Nao foi possivel enviar sua mensagem.');
       }
     } catch (error) {
       console.error('Erro:', error);
-      showErrorMessage('Erro ao enviar mensagem. Tente novamente ou ligue para 1-866-601-1758.');
+      showErrorMessage(
+        `Erro ao enviar mensagem. Tente novamente ou ligue para ${CONTACT_DATA.phoneDisplay}.`
+      );
     } finally {
       if (submitBtn) {
         submitBtn.textContent = originalText;
@@ -152,7 +225,7 @@ function showSuccessMessage(name) {
 function showErrorMessage(errorMsg) {
   const message = createAlert({
     title: 'Erro ao enviar mensagem',
-    body: `${errorMsg}<br>Ou ligue: <a href="tel:18666011758">1-866-601-1758</a>`,
+    body: `${errorMsg}<br>Ou ligue: <a href="tel:${CONTACT_DATA.phoneRaw}">${CONTACT_DATA.phoneDisplay}</a>`,
     type: 'error'
   });
 
@@ -256,21 +329,3 @@ if (!document.querySelector('style[data-alert-styles]')) {
   `;
   document.head.appendChild(alertStyles);
 }
-
-// Lazy loading for images
-if ('IntersectionObserver' in window) {
-  const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const img = entry.target;
-      if (img.dataset.src) {
-        img.src = img.dataset.src;
-        img.classList.add('loaded');
-        observer.unobserve(img);
-      }
-    });
-  });
-
-  document.querySelectorAll('img[data-src]').forEach(img => imageObserver.observe(img));
-}
-

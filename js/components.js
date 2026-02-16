@@ -35,15 +35,15 @@ function setActiveMenu() {
 
 // carregando header e footer + marca menu ativo depois do header
 loadComponent("header", "../../public/components/header.html", () => {
+  if (typeof applyContactData === "function") {
+    applyContactData(document.getElementById("header"));
+  }
   setActiveMenu();
   if (typeof initHeaderUI === "function") initHeaderUI();
 });
-loadComponent("footer", "../../public/components/footer.html");
-
-// menu mobile
-document.addEventListener("click", (e) => {
-  if (e.target.id === "menuToggle") {
-    document.getElementById("nav")?.classList.toggle("active");
+loadComponent("footer", "../../public/components/footer.html", () => {
+  if (typeof applyContactData === "function") {
+    applyContactData(document.getElementById("footer"));
   }
 });
 
